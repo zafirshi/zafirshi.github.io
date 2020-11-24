@@ -1,41 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/10/04/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<a id="more"></a>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>保研那些事</title>
     <url>/2020/10/04/test-my-site/</url>
     <content><![CDATA[<p>这里简单介绍一下我的保研经历，同时也作为我尝试用Markdown第一次编写博客的一个小demo</p>
 <a id="more"></a>
-
-<h1 id="保研那些事"><a href="#保研那些事" class="headerlink" title="保研那些事"></a>保研那些事</h1><p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+<h1 id="保研那些事">保研那些事</h1>
+<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
 <p>啊啊啊啊啊啊啊啊啊啊啊啊</p>
 <p>啊啊啊啊啊啊啊啊啊啊啊啊</p>
-<h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><p><em>斜体</em><br><strong>粗体</strong><br>这是啥 要是不打换行符号的话可能一直都是连在一起的哈哈哈哈哈真好玩！</p>
+<h2 id="这是二级标题">这是二级标题</h2>
+<p><em>斜体</em> <strong>粗体</strong> 这是啥 要是不打换行符号的话可能一直都是连在一起的哈哈哈哈哈真好玩！</p>
 <p>这里换个行</p>
 <p>果然可以，很强</p>
-<p>下面试一下分隔符</p>
-<hr>
-<hr>
-<hr>
+<p>下面试一下分隔符 - - - ----- ***</p>
 <p>无序列表</p>
 <ul>
 <li>第一个</li>
@@ -44,27 +22,21 @@
 </ul>
 <p>这个蛮好用的</p>
 <p>下面试一下有序列表</p>
-<ol>
+<ol type="1">
 <li><p>列表1</p>
-<p> 这里缩进也是可以体现出来的，整挺好，试试写的长一点，看看是不是会<strong>自动缩进</strong>，哦~果然可以</p>
-<p> 哦~VScode还能自动对齐</p>
-</li>
-<li><p>列表2</p>
-</li>
-<li><p>第一项：</p>
+<p>这里缩进也是可以体现出来的，整挺好，试试写的长一点，看看是不是会<strong>自动缩进</strong>，哦~果然可以</p>
+<p>哦~VScode还能自动对齐</p></li>
+<li><p>列表2</p></li>
+<li>第一项：
 <ul>
-<li>子列表1   //这里的Tab键可以实现有序列表嵌套无序列表，挺好的</li>
-</ul>
-<ul>
+<li>子列表1 //这里的Tab键可以实现有序列表嵌套无序列表，挺好的</li>
 <li>子列表2</li>
-</ul>
-</li>
-<li><p>第二项：</p>
+</ul></li>
+<li>第二项：
 <ul>
 <li>子列表1</li>
 <li>子列表2</li>
-</ul>
-</li>
+</ul></li>
 </ol>
 <p>下面尝试一下<strong>区块</strong>（引用）</p>
 <blockquote>
@@ -73,16 +45,33 @@
 </blockquote>
 <p>区块嵌套</p>
 <blockquote>
-<p>这是第一层区块</p>
-<blockquote>
-<p>这是第二层区块</p>
-</blockquote>
+<p>这是第一层区块 &gt; 这是第二层区块</p>
 </blockquote>
 <p>下面搞些常见的，代码块</p>
-<p>​<code>javascript     $(document).ready(function () &#123;     alert(&#39;RUNOOB&#39;);     &#125;); ​</code></p>
+<p>​<code>javascript     $(document).ready(function () &#123;     alert('RUNOOB');     &#125;); ​</code></p>
 ]]></content>
       <tags>
         <tag>Further education</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/10/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
