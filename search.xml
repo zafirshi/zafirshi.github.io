@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/10/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>保研那些事</title>
     <url>/2020/10/04/test-my-site/</url>
     <content><![CDATA[<p>这里简单介绍一下我的保研经历，同时也作为我尝试用Markdown第一次编写博客的一个小demo</p>
 <a id="more"></a>
-<h1 id="保研那些事">保研那些事</h1>
+<h2 id="保研那些事">保研那些事</h2>
 <p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
 <p>啊啊啊啊啊啊啊啊啊啊啊啊</p>
 <p>啊啊啊啊啊啊啊啊啊啊啊啊</p>
 <h2 id="这是二级标题">这是二级标题</h2>
-<p><em>斜体</em> <strong>粗体</strong> 这是啥 要是不打换行符号的话可能一直都是连在一起的哈哈哈哈哈真好玩！</p>
+<p><em>斜体</em> <strong>粗体</strong></p>
+<p>这是啥 要是不打换行符号的话可能一直都是连在一起的哈哈哈哈哈真好玩！</p>
 <p>这里换个行</p>
 <p>果然可以，很强</p>
-<p>下面试一下分隔符 - - - ----- ***</p>
+<p>下面试一下分隔符 - - - - - -</p>
 <p>无序列表</p>
 <ul>
 <li>第一个</li>
@@ -48,8 +69,12 @@
 <p>这是第一层区块 &gt; 这是第二层区块</p>
 </blockquote>
 <p>下面搞些常见的，代码块</p>
+<p><code>abs()</code>绝对值函数</p>
+<p><code>function()&#123; console.log(&quot;Chicken you are too beautiful!&quot;); &#125;</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">result = <span class="number">0</span></span><br><span class="line">array = np.array([<span class="number">145</span>, <span class="number">124</span>, <span class="number">58</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> array:</span><br><span class="line">    result += int(i)    <span class="comment"># 将 np.int32 转为 int</span></span><br><span class="line">    result = result &lt;&lt; <span class="number">8</span></span><br><span class="line"></span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># 2440837632 没有出现溢出</span></span><br></pre></td></tr></table></figure>
 <p>​<code>javascript     $(document).ready(function () &#123;     alert('RUNOOB');     &#125;); ​</code></p>
 <p>上面的模块写的好像不太行的样子，不管了，先测试一下公式吧：</p>
+<p>本质上这里实现了用Latex语法来编辑MarkDown中公式的目的</p>
 <p><span class="math display">\[\begin{equation} \label{eq1}
 e=mc^2
 \end{equation}\]</span></p>
@@ -64,29 +89,30 @@ a &amp;= b + c \\
 <p>Equation <span class="math inline">\(\eqref{eq2}\)</span> is a multi-line equation.</p>
 <p><span class="math display">\[x+1\over\sqrt{1-x^2} \tag{i}\label{eq_tag}\]</span></p>
 <p>Equation <span class="math inline">\(\eqref{eq_tag}\)</span> use <code>\tag&#123;&#125;</code> instead of automatic numbering.</p>
+<p>上面的公式都是采用latex语法和结构进行编写的，预览时右侧的界面无法正常显示是没有关系的，实际在博客上，我们安装了mathjax第三方插件，实际在源文件头部将其关键字设置为True即可，亦即：</p>
+<blockquote>
+<p>mathjax: true</p>
+</blockquote>
+<p>注释怎么解决啊，是不是<code>Ctrl+/</code>，我试一下： <!-- 下面这行我想要注释掉 --> 好像是可以的，在安装了<code>Maekdown All in One</code>之后，是直接有快捷键注释的，很方便，不知道这个在博客部署之后有没有问题，我等会尝试一下。</p>
+<p>OK！接下来试一下emoji：<code>笑脸</code>:smile：这里两边用英文冒号引用起来，也是一样，预览这边有问题，真心垃圾这个软件。</p>
+<p><span class="emoji" data-alias="smile" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p>
+<p>下面试一下框选：</p>
+<ul>
+<li>[ ] 不勾选</li>
+<li><p>[x] 框选</p></li>
+<li>[ ] No</li>
+<li><p>[X] Yes</p></li>
+</ul>
+<p>这边我部署一下试一下啊，看下三个</p>
+<ul>
+<li>emoji表情是否可以加载出来</li>
+<li>代码块是否可以高亮且有行标显示</li>
+<li><code>Ctrl+/</code>的注释是否会引起编译歧义</li>
+</ul>
+<p>OK！Let's started！</p>
 ]]></content>
       <tags>
         <tag>Further education</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/10/04/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>
