@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/10/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>保研那些事</title>
     <url>/2020/10/04/test-my-site/</url>
     <content><![CDATA[<p>这里简单介绍一下我的保研经历，同时也作为我尝试用Markdown第一次编写博客的一个小demo</p>
@@ -93,26 +113,6 @@ a &amp;= b + c \\
       <tags>
         <tag>Further education</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/10/04/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>保研那些事</title>
@@ -430,16 +430,15 @@ EDA设计
 <p>从保研的过程来看，<strong>一般拥有科研经历的学生会更加受到老师的青睐</strong>，特别是取得一些成果的。其实不管结果层级如何（除非特别牛的人，老师都知道多数本科生的水平上限在哪里），只要把自己负责的工作，会做的事情和老师讲清楚，<strong>会在面试中占据极大的主动权</strong>，赢面会很大很大！</p>
 </blockquote>
 <h2 id="信息的获取">信息的获取</h2>
-<p>有人说，保研是一场信息战，这话一点都不假。<strong>信息获取的多少和质量，直接决定了最后能获得offer的层次</strong>，有些时候，甚至比硬实力还要关键！</p>
-<p>信息获取途径：</p>
-<h3 id="保研论坛"><a href="https://www.eeban.com/">保研论坛</a></h3>
-<p>这个网站上有各个学校发布的相关通知，可以使用<a href="https://chaxun.eeban.com/">站内搜索引擎</a>查询自己感兴趣学校的通知。也可以在论坛区点击查看相关帖子，相关更新还是比较及时的。</p>
+<p>有人说，保研是一场信息战，这话一点都不假。<strong>信息获取的多少和质量，直接决定了最后能获得offer的层次</strong>，有些时候，甚至比硬实力还要关键！下面列举了一些我个人的<strong>信息获取途径：</strong></p>
+<h3 id="保研论坛"><a href="https://www.eeban.com/" title="点击直接跳转">保研论坛</a></h3>
+<p>这个网站上有各个学校发布的相关通知，可以使用<a href="https://chaxun.eeban.com/" title="点击直接跳转">站内搜索引擎</a>查询自己感兴趣学校的通知。也可以在论坛区点击查看相关帖子，相关更新还是比较及时的。</p>
 <blockquote>
 <p>查询引擎是通过爬虫爬取到的，所以可能查询到前几年的通知，也可能查询到前后时间有出入的通知（被爬取网站后期有更新导致），保险起见，<strong>这个工具只能进行粗略的查找，精细的准确通知，还是要关注相关学校的官网</strong>。</p>
 </blockquote>
-<h3 id="微信公众号1保研前辈"><a href="http://mp.weixin.qq.com/profile?src=3&amp;timestamp=1607951670&amp;ver=1&amp;signature=xyuPlJ7*03Gj*IVPc0m8EL5Ib0geaZTjubY*80Dui7FrIA*ujB10DAM6Zk9gubQ6m7TY7UUQkLx*09aIMwCrAQ==">微信公众号1——保研前辈</a></h3>
+<h3 id="微信公众号1保研前辈"><a href="http://mp.weixin.qq.com/profile?src=3&amp;timestamp=1607951670&amp;ver=1&amp;signature=xyuPlJ7*03Gj*IVPc0m8EL5Ib0geaZTjubY*80Dui7FrIA*ujB10DAM6Zk9gubQ6m7TY7UUQkLx*09aIMwCrAQ==" title="点击直接跳转">微信公众号1——保研前辈</a></h3>
 <p>这个公众号上的推送比较及时，通知都是最新的，而且还会针对一些学校的通知显示全文。这个账号在知乎上有相关的经验专栏，一些经验帖还是蛮有帮助的。（不是在打广告哈~~）</p>
-<h3 id="微信公众号2保研"><a href="http://mp.weixin.qq.com/profile?src=3&amp;timestamp=1607951994&amp;ver=1&amp;signature=HgiXqpaDngANrRwo5QVGp4HUBysbw7tEXOv7*OmcjolAZ9KfXhIaf64wmmlqobePgzgPDibWYY2Do8G0b-6WXQ==">微信公众号2——保研</a></h3>
+<h3 id="微信公众号2保研"><a href="http://mp.weixin.qq.com/profile?src=3&amp;timestamp=1607951994&amp;ver=1&amp;signature=HgiXqpaDngANrRwo5QVGp4HUBysbw7tEXOv7*OmcjolAZ9KfXhIaf64wmmlqobePgzgPDibWYY2Do8G0b-6WXQ==" title="点击直接跳转">微信公众号2——保研</a></h3>
 <p>这个公众号可能是关注的人最多的（因为名字简单<span class="emoji" data-alias="joy" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>），但是基本的功能都大同小异。该号对专业类型——经管类、医学类、理工类分类的汇总通知，所以可以依据自己的专业分类选择。</p>
 <blockquote>
 <p>这些公众号可以多加几个，上面的通知更新频率都各有不同，所以<strong>多加几个公众号</strong>可以更及时的收到通知。</p>
@@ -448,10 +447,62 @@ EDA设计
 <p>前面获取通知的手段只能起到提醒的作用，真正<strong>正式的通知，还要在相关学校的官网上查询！</strong>。这点切记！！！切记！！！</p>
 <h3 id="导师评价类网站">导师评价类网站</h3>
 <p>导师的人品性格，科研实力等情况是在筛选目标学校之后需要首先考虑的，当然，谷歌学术可以查询老师的科研实力，但是老师的人品性格等信息相对较难获取。</p>
-<p>之前，导师评价网等相关网站现在都在神秘势力的干预下挂掉了。但一些其他<a href="https://www.zhihu.com/question/417141275">替补网站</a>借助了数据库，也是可以查询的。具体好用的相关网站可能得上<a href="https://www.zhihu.com/">知乎</a>上找一下了。。。</p>
+<p>之前，导师评价网等相关网站现在都在神秘势力的干预下挂掉了。但一些其他<a href="https://www.zhihu.com/question/417141275" title="点击直接跳转">替补网站</a>借助了数据库，也是可以查询的。具体好用的相关网站可能得上<a href="https://www.zhihu.com/" title="点击直接跳转">知乎</a>上找一下了。。。</p>
+<blockquote>
+<p>关于这上面评价的是否真实准确，<strong>我个人秉持着“宁可信其有，不可信其无”的态度</strong>。毕竟，学生也不是没事干才上去黑老师的，一般没有不可调和的矛盾，不至于影响老师招生。再者这些数据也有可能是恶意差评或者刷好评，所以总的态度是：<strong>扎堆差评的老师一定不要选，一定是雷！较少差评或者没有评价的老师，说明人品正常，可以考虑</strong>。当然，如果有直系或者认识的<code>学长学姐在这个学校，也可以帮忙打听一下</code>，外校保研这种方式打听到的消息十分有用！（一般学长学姐还是很乐意帮忙的，大家都是学生，也都是从这个阶段过来的，都受益于前人）</p>
+</blockquote>
 <h2 id="夏令营">夏令营</h2>
+<p>今年由于疫情的原因，许多学校的夏令营改为线上举行，参加夏令营省去了许多路途上的时间成本，虽然节约了时间，但是也导致<strong>海投之风盛行</strong>，<strong>内卷十分严重</strong>。很多优秀的学生为了有更多选择的机会，选择海投，纵使夏令营时间重合，也无非是多开一个设备的事情，面试时间大概率也不会重合，所以许多夏令营真的都是神仙打架。</p>
+<p>再者，疫情使原来很多想出国深造的学生放弃出国，学校收到了数量众多，且生源质量十分优秀学生的申请，出现了——<code>清北投华五，985学生拿不到offer，211大佬连初审都没法通过</code>的魔幻开局<span class="emoji" data-alias="sob" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span><span class="emoji" data-alias="sob" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span><span class="emoji" data-alias="sob" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span></p>
+<p>在这个大背景下，我夏令营投了</p>
+<ul>
+<li><p><del>上交电院微纳电子系</del></p>
+<p>上交微纳电子系对于211院校，材料审核的规则是——<strong>每个学校只审核通过一位同学，且只接收专业第一，专业相关优先，宁缺毋滥</strong>。所以很自然的就没了<span class="emoji" data-alias="pensive" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">😔</span>。</p></li>
+<li><p><del>中科大六系——信号与信息处理方向（本质上还是CS）</del></p>
+<p>今年中科大着实卷的厉害，而且今年科大只有夏令营没有预推免，所以夏令营营员人数空前的多。而且，科大有着<strong>按照专业排名筛选简历</strong>的传统，就六系而言，今年我们学院通过初审的基本上都是专业第一（大专业，人数&gt;150，专业第二也有通过）。排名不靠前的学生，纵使其他方面特别强，也是机会渺茫。</p>
+<p>我们专业人少，作为专业第二的我，没了<span class="emoji" data-alias="sob" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span><span class="emoji" data-alias="sob" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span><span class="emoji" data-alias="sob" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span>。</p></li>
+<li><p><del>北理工信电院</del></p>
+<p>这个也很<code>离谱</code>的，我看夏令营通过的多数都是本科就比北理工好很多是985学生（审核老师也不想想这些学生最后会不会去<span class="emoji" data-alias="sweat" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">😓</span>），而211高校通过的学生数量很少，我们学院只通过了两个，且都是相关专业第一。</p></li>
+<li><p><del>哈工大（深圳校区）——信号与信息处理</del></p>
+<p>害，其实当时报这个是冲着哈工大的牌子和深圳的地理位置，也没想着真的要去，没想到今年<code>这个最离谱</code>，当然也没过初审。</p>
+<p>至于原因，可以搜索知乎上相关的回答，真的就离谱的厉害。。。</p></li>
+<li><p>浙江大学光电院——光学工程方向（部分老师还是会做图像算法相关的交叉研究）</p>
+<p>依旧，还是按照成绩位次筛选简历，这次我通过了初审，下面<a href="###浙大光电院" title="点击直接跳转">详述面试过程</a>。</p></li>
+<li><p>电子科技大学信通院</p>
+<p>通过初审并拿到offer，下面<a href="###电子科技大学信通院" title="点击直接跳转">详述</a>。</p></li>
+<li><p>中科院——上海微系统所（科研所）</p>
+<p>通过初审并拿到offer，下面<a href="###中科院——上海微系统所" title="点击直接跳转">详述</a>。</p></li>
+</ul>
+<p>方向上基本都是和CS(给的工资高，且用人需求量大)和IC(行业受国家扶持，发展前景很好)相关的。</p>
+<h3 id="中科院上海微系统所">中科院——上海微系统所</h3>
+<p>可能是因为是科研所的原因吧，微系统所的审核通过的十分顺利，通过名单中也鲜有大牛高校的学生，通过的总人数在200人左右，最后的优营人数未知。</p>
+<p>夏令营总共有两天，</p>
+<ul>
+<li><code>第一天</code>：宣讲 讲述所里各个科室的研究方向和研究成果，便于学生选择感兴趣的方向；</li>
+<li><code>第二天</code>：全天网络面试 <strong>面试时间5min（1min英文自我介绍，4min问答）</strong>，面试的时候感觉老师没有在听我的英语介绍<span class="emoji" data-alias="joy" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，基本上按照提交材料上的内容询问，问了我两个参加的竞赛里的内容，就很快结束了。真心感觉，5min的面试真心面不出什么东西。</li>
+</ul>
+<p>之后，<code>第三天</code>下午，面试结果就出来了，和意料中的一样，拿到了offer，总体上还是感觉相对容易的。</p>
+<h3 id="电子科技大学信通院">电子科技大学信通院</h3>
+<p>成电信通院的夏令营感觉更多的是在宣讲，并没有选拔，选拔是在之后的<code>“优选计划”</code>中，各系各科室按照各自情况，自己组织的(这感觉和成电的导师选拔制有关，导师来选择学生，不会经学院手)。而学院的报名系统，感觉更多的像是一个信息统计工具。可以依据自己的兴趣，发邮件咨询对应组的招生老师，老师若是看你骨骼精奇，会回复邮件并安排时间组织面试。</p>
+<blockquote>
+<p><strong>强烈建议!!！感兴趣的组要尽早发邮件询问，不然老师后期的邮箱会炸掉，就不会再去看新收到的邮件了。</strong></p>
+</blockquote>
+<p>我面试的组有两个老师，主要按照我列举的所学课程，问了我一些很基本的问题，比如：</p>
+<ul>
+<li><p>cpp的相关知识： 什么是局部变量，什么是全局变量？</p></li>
+<li><p>信号系统中的相关知识： 拉式变化和Z变化有什么区别和联系？（二者没联系，是老师挖的坑） DFT和DTFT的联系？</p></li>
+</ul>
+<p>面试<strong>总共用了25min</strong>，主要问了我一些专业课程的基础问题，当然这也和面试的团队有关，也问了一些很简单的英语问题，，面完后一个小时就给我发offer了。</p>
+<h3 id="浙江大学光电院">浙江大学光电院</h3>
+<p>浙大的夏令营也是两天：</p>
+<ul>
+<li><code>第一天</code>：宣讲 讲学院各个科室的研究方向和进展，讲解的时候可以获得许多网上查询不到的信息，可以对感兴趣的方向或者老师做一些标注和笔记，方便后续的查询。 当然，宣讲的内容也是不全面的，更多有关老师的科研情况和课题组的研究方向的信息，可以去<a href="http://opt.zju.edu.cn/main.htm" title="点击直接跳转">学院网站</a>，或者<a href="https://person.zju.edu.cn/index/" title="点击直接跳转">老师个人主页</a>上查询。</li>
+</ul>
 <h2 id="预推免">预推免</h2>
 <h2 id="tips">Tips</h2>
+<h3 id="邮件">邮件</h3>
+<h3 id="老师">老师</h3>
+<h3 id="不去尽早说">不去尽早说</h3>
 ]]></content>
       <categories>
         <category>Life</category>
