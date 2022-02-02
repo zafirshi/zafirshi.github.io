@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>test_insert_pic</title>
-    <url>/2022/02/01/test-insert-pic/</url>
-    <content><![CDATA[<p>这个blog测试图片的插入方式</p>
-<a id="more"></a>
-<figure>
-<img src="/2022/02/01/test-insert-pic/pic1.png" alt="pic1" /><figcaption>pic1</figcaption>
-</figure>
-<figure>
-<img src="/2022/02/01/test-insert-pic/pic1.png" alt="pic1" /><figcaption>pic1</figcaption>
-</figure>
-<p><a href="/2022/02/01/test-insert-pic/FQ.pdf">FQ.pdf</a></p>
-<p><a href="/2022/02/01/test-insert-pic/v2rayN.zip">v2rayN.zip</a></p>
-<p><a href="2022-02-01-test-insert-pic\FQ.pdf">FQ.pdf</a></p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Further education</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>芜湖~起飞~✈</title>
     <url>/2022/02/01/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</url>
     <content><![CDATA[<p>使用Clash或V2ray订阅机场链接，实现优雅科学上网，附机场推荐和手把手安装教程</p>
