@@ -6,10 +6,10 @@
     <content><![CDATA[<p>这个blog测试图片的插入方式</p>
 <a id="more"></a>
 <figure>
-<img src="/2022-02-01-test-insert-pic/pic1.png" alt="pic1" /><figcaption>pic1</figcaption>
+<img src="/2022/02/01/test-insert-pic/pic1.png" alt="pic1" /><figcaption>pic1</figcaption>
 </figure>
 <figure>
-<img src="/2022-02-01-test-insert-pic/pic1.png" alt="pic1" /><figcaption>pic1</figcaption>
+<img src="/2022/02/01/test-insert-pic/pic1.png" alt="pic1" /><figcaption>pic1</figcaption>
 </figure>
 <p><a href="/2022/02/01/test-insert-pic/FQ.pdf">FQ.pdf</a></p>
 <p><a href="/2022/02/01/test-insert-pic/v2rayN.zip">v2rayN.zip</a></p>
