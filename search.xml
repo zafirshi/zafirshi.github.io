@@ -1,117 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>芜湖~起飞~✈</title>
-    <url>/2022/02/01/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</url>
-    <content><![CDATA[<p>使用Clash或V2ray订阅机场链接，实现优雅科学上网，附机场推荐和手把手安装教程</p>
-<span id="more"></span>
-<hr />
-<p>最近之前一直租的香港服务器节点到期了，节点是外贸专线【不限流量，带宽100M，使用后基本上没有挂过，每月15】，原本准备再续租的，但租赁方把我删了😂（是的，你没看错，之前是用wx交流的...）</p>
-<p>于是乎，最近放假在家里没事，就顺着三本的论坛调查了一些机场，发现了新世界的大门🎉</p>
-<h2 id="总述">总述</h2>
-<p>科学上网主要有两种主流方式——自建VPS服务和租用机场</p>
-<ul>
-<li><p>自建VPS服务：自己租用国外服务器，在上面配置流量代理，常见的有微软服务器（好像学生会员可以白嫖一年），<a href="https://bandwagonhost.com/">搬瓦工</a>等等</p>
-<ul>
-<li>优点：隐私保护、流量多和带宽高、支持共享和租赁节点</li>
-<li>缺点：价格贵、部署和运维成本较高</li>
-</ul>
-<blockquote>
-<p>PS:之前租用在香港的阿里云服务器部署过，但好像服务器上的安全协议没有配置好（也可能是服务器本身有内鬼....），次日端口就让GFW检测到并封禁了，价格1T流量 24/mon，支持7日退款，性价比还行</p>
-</blockquote></li>
-<li><p>租用机场：租用别人在VPS上搭建好的服务，一般是注册账号获取<strong>订阅链接</strong></p>
-<ul>
-<li>优点：操作简单，价格低</li>
-<li>缺点：节点可能不稳定，机场运营商可能会跑路</li>
-</ul></li>
-</ul>
-<p>本着能用就行，适度付费的原则，<strong>本文接下来主要介绍租用机场科学上网的方式</strong></p>
-<h2 id="机场推荐">机场推荐</h2>
-<p>机场的选择首先考虑<strong>稳定</strong>——机场的运营商会不会跑路，节点的稳定性，节点挂掉了会不会很快恢复等；之后考虑<strong>租用套餐</strong>：娱乐看视频为主选择大流量高带宽，学术科研为主选择节点多小流量价格便宜的即可。</p>
-<p>个人在使用，也是比较推荐的机场有下面两个</p>
-<h3 id="ggme"><a href="https://ggme.xyz/user">GGme</a></h3>
-<p>这个机场是三本用的人比较多的，用教育邮箱注册，所有套餐都会半价，加之时不时的叠加优惠码价格很便宜，VIP5目前<code>配置-&gt;价格</code>大致是：两年|2.4T|100M带宽|5台设备|100+节点|-&gt;30RMB左右</p>
-<p>虽然便宜，但节点列表要时不时更新，有些节点有流量倍率（1.5左右），节点多香港，也有新加坡和日本的节点。会时不时挂，检修恢复也很快</p>
-<p>便宜就完事了！要什么自行车！</p>
-<h3 id="glados"><a href="https://glados.best/">GlaDOS</a></h3>
-<p>这个机场是老牌机场了，<strong>教育邮箱注册可以白嫖一年</strong>，每月50G流量常规使用基本够用，升级套餐叠加优惠券100RMB/一年多，教育邮箱注册再升级相当于100RMB/700多天/每月200G，性价比也很高</p>
-<p>机场有人工客服可邮件咨询，节点很稳定，原生支持Clash客户端用起来很方便</p>
-<h3 id="其他机场">其他机场</h3>
-<p>瞎搞的时候发现了一个<a href="https://merlinblog.xyz/">宝藏网站</a>，上面有很多实用的知识和技巧，但网站需要科学上网才可以打开</p>
-<blockquote>
-<p>宝藏网站上的<a href="https://merlinblog.xyz/seetheworld.html">机场推荐</a></p>
-</blockquote>
-<h2 id="客户端推荐">客户端推荐</h2>
-<p>在不同平台上使用订阅链接会有不同的客户端，一般机场会有推荐的客户端，为简单可按照机场推荐操作。</p>
-<h3 id="v2raynv2rayng">V2RayN|V2rayNG</h3>
-<p>这是我最早使用的客户端代理软件，很多机场都直接提供基于该客户端的教程，可以运行在Windows(V2rayN)和Android(V2rayNG)上，支持Vmess等多种协议，在有较少的稳定节点或自建VPS时，用起来比较方便</p>
-<blockquote>
-<p>V2rayN下载链接：<a href="https://github.com/2dust/v2rayN/releases">Download(Github下载)</a> <a href="v2rayN.zip">v2rayN.zip(站点下载)</a></p>
-<p>V2rayNG下载链接：<a href="https://github.com/2dust/v2rayNG/releases">Download</a></p>
-</blockquote>
-<h3 id="clash">Clash</h3>
-<p>在租用机场时，可能当此指定的可用节点在下次就不太好用了，所以会有<strong>自动检测延时并自动选择最短延时节点</strong>的需求；另一方面，针对不同的使用场景，需要激活的节点并不相同——看油管使用HK节点，用Github使用US节点，即<strong>节点分流</strong>；同时还会有<strong>定时更新节点</strong>和<strong>临时局域网软路由</strong>等需求，这些Clash都可以实现</p>
-<p>这个软件还可以在linux系统上也可以使用，通过网页控制台进行策略调整和可视化，同时还支持Windows和Android</p>
-<blockquote>
-<p>Clash for Windows:<a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Download(Github下载)</a></p>
-<p>Clash for Android：<a href="https://glados.rocks/tools/cfa-2.5.4-premium-universal-release.apk">Download</a></p>
-</blockquote>
-<h3 id="小火箭">小火箭</h3>
-<p>苹果ios客户端公认最好用的客户端，下载需要用美区AppleID账号，并支付一点小钱，之后的配置和安卓端相似</p>
-<h2 id="安装指南">安装指南</h2>
-<p>写这部分的原因是：科学上网是一个悖论，教程和机场得翻出去才能看到和使用，但翻都翻出去了，还需要看教程吗？😂</p>
-<p>所以写这一部分是为了将墙外的教程搬过来，傻瓜操作翻墙：</p>
-<ol type="1">
-<li>获取订阅链接</li>
-<li>下载客户端</li>
-<li>在客户端中添加订阅链接</li>
-</ol>
-<h3 id="订阅链接">订阅链接</h3>
-<p>租用机场会有一个归属于注册账号的订阅链接，首次翻墙可以找同学借一个，之后有了自己的订阅链接用自己的即可</p>
-<h3 id="下载客户端">下载客户端</h3>
-<p>使用<del>朋友</del>提供的客户端（github国内访问很慢，自己下载不显示，但可以之后自己去上面更新），<strong>这里推荐使用Clash客户端</strong></p>
-<p><strong>【注意！！！】</strong>本文中的Android clash客户端可直接点击链接下载（<strong>无需翻墙</strong>）</p>
-<h3 id="添加订阅链接">添加订阅链接</h3>
-<p>机场一般都会在醒目位置显示账号的订阅链接，多数的机场也会有详细的配置教程，这里主要针对自己使用的两个机场和两个客户端，仅介绍Windows上的方法（<u>对其他设备，机场中有详细的配置教程</u>）</p>
-<h4 id="v2ray添加订阅链接">V2Ray添加订阅链接</h4>
-<ul>
-<li><strong>获取客户端</strong>：安装好客户端并打开（最好下载不是特别新的新版）</li>
-<li><strong>订阅节点</strong>：双击任务栏右下角<code>V2rayN</code>图标→订阅→订阅设置→添加→备注：<code>机场名字</code>→地址：<code>(机场订阅链接)</code>→确定；订阅→ 更新订阅→等待获取节点；</li>
-<li><strong>使用节点</strong>：右键点击任意节点→设为活动服务器；</li>
-</ul>
-<h4 id="clash添加订阅链接">Clash添加订阅链接</h4>
-<ul>
-<li><p><strong>获取客户端</strong>：下载0.11版本以上的客户端</p></li>
-<li><p><strong>订阅节点</strong>：（V0.19.5）在控制面版左侧：Profiles → 复制配置文件的URL到文本框中 → Download，会下载一个yaml或者yml配置文件 →选中右键进入Settings →Update Interval修改下方节点自动更新的时间（GGme推荐设置为18h，GlaDOS推荐24h）</p></li>
-<li><p><strong>使用节点</strong>：（V0.19.5）在控制面版左侧:Proxies → 选择节点 → 在控制面版左侧：General → 激活Systems Proxy</p>
-<blockquote>
-<p>URL链接一般形如https://xxx/xxx/xxx/xx.yaml或者https://xxx/xxx/xxx/xx.yml，看最后的文件后缀</p>
-</blockquote>
-<blockquote>
-<p>对于没有提供Clash支持的机场，比如上面的GGme，可以将订阅链接借助 <a href="https://github.com/tindy2013/subconverter">Subconverter</a> 工具进行封装，网上也有现成的API网页前端，可以在线生成（亲测下面这个蛮好用的）</p>
-<ul>
-<li><a href="https://bianyuan.xyz/">https://bianyuan.xyz</a></li>
-</ul>
-<p>自己生成的Clash链接可以先导入客户端，之后依据自己的需求对照教程对节点进行分类和修改</p>
-</blockquote></li>
-</ul>
-<p>关于<a href="https://www.codein.icu/clashtutorial/#features">Clash的教程</a>，这个写的很棒，有什么使用上的问题，可以直接对照学习</p>
-<p>之所以推荐Clash，是因为Clash可以依据使用者不同的使用需求，对节点进行<strong>分组</strong>，实现看视频用香港节点，访问github用美国节点，期间软件自动分流😁</p>
-<p>并可以设置分组属性，<u>自动探测多节点中延时|速度最快者，动态选择最优可用节点</u>，很适合机场多节点的情况（因为时不时单节点抽风，手动更换节点很麻烦，不知道哪个节点可用，也不知道哪个节点最好）</p>
-<p>使用Clash很省心，出现访问问题，关闭再开启代理，让软件自动选择即可，完全碾压V2ray</p>
-<h2 id="总结">总结</h2>
-<p>OK! 到这里你已经打开了新世界的大门! 起飞成功!✈</p>
-<p>一些感觉很棒的教程<a href="https://www.codein.icu/clashtutorial/#features">Clash的教程</a>（无需翻墙）和<a href="https://merlinblog.xyz/wikipageguide.html">宝藏网站</a>（需翻墙）🎉</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>科学上网</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Latex语法</title>
     <url>/2022/02/02/Latex/</url>
     <content><![CDATA[<p>Latex基本语法的快速入门（Updating），为自己快速查找回想指令</p>
@@ -289,6 +178,186 @@
       </categories>
       <tags>
         <tag>Latex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>芜湖~起飞~✈</title>
+    <url>/2022/02/01/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</url>
+    <content><![CDATA[<p>使用Clash或V2ray订阅机场链接，实现优雅科学上网，附机场推荐和手把手安装教程</p>
+<span id="more"></span>
+<hr />
+<p>最近之前一直租的香港服务器节点到期了，节点是外贸专线【不限流量，带宽100M，使用后基本上没有挂过，每月15】，原本准备再续租的，但租赁方把我删了😂（是的，你没看错，之前是用wx交流的...）</p>
+<p>于是乎，最近放假在家里没事，就顺着三本的论坛调查了一些机场，发现了新世界的大门🎉</p>
+<h2 id="总述">总述</h2>
+<p>科学上网主要有两种主流方式——自建VPS服务和租用机场</p>
+<ul>
+<li><p>自建VPS服务：自己租用国外服务器，在上面配置流量代理，常见的有微软服务器（好像学生会员可以白嫖一年），<a href="https://bandwagonhost.com/">搬瓦工</a>等等</p>
+<ul>
+<li>优点：隐私保护、流量多和带宽高、支持共享和租赁节点</li>
+<li>缺点：价格贵、部署和运维成本较高</li>
+</ul>
+<blockquote>
+<p>PS:之前租用在香港的阿里云服务器部署过，但好像服务器上的安全协议没有配置好（也可能是服务器本身有内鬼....），次日端口就让GFW检测到并封禁了，价格1T流量 24/mon，支持7日退款，性价比还行</p>
+</blockquote></li>
+<li><p>租用机场：租用别人在VPS上搭建好的服务，一般是注册账号获取<strong>订阅链接</strong></p>
+<ul>
+<li>优点：操作简单，价格低</li>
+<li>缺点：节点可能不稳定，机场运营商可能会跑路</li>
+</ul></li>
+</ul>
+<p>本着能用就行，适度付费的原则，<strong>本文接下来主要介绍租用机场科学上网的方式</strong></p>
+<h2 id="机场推荐">机场推荐</h2>
+<p>机场的选择首先考虑<strong>稳定</strong>——机场的运营商会不会跑路，节点的稳定性，节点挂掉了会不会很快恢复等；之后考虑<strong>租用套餐</strong>：娱乐看视频为主选择大流量高带宽，学术科研为主选择节点多小流量价格便宜的即可。</p>
+<p>个人在使用，也是比较推荐的机场有下面两个</p>
+<h3 id="ggme"><a href="https://ggme.xyz/user">GGme</a></h3>
+<p>这个机场是三本用的人比较多的，用教育邮箱注册，所有套餐都会半价，加之时不时的叠加优惠码价格很便宜，VIP5目前<code>配置-&gt;价格</code>大致是：两年|2.4T|100M带宽|5台设备|100+节点|-&gt;30RMB左右</p>
+<p>虽然便宜，但节点列表要时不时更新，有些节点有流量倍率（1.5左右），节点多香港，也有新加坡和日本的节点。会时不时挂，检修恢复也很快</p>
+<p>便宜就完事了！要什么自行车！</p>
+<h3 id="glados"><a href="https://glados.best/">GlaDOS</a></h3>
+<p>这个机场是老牌机场了，<strong>教育邮箱注册可以白嫖一年</strong>，每月50G流量常规使用基本够用，升级套餐叠加优惠券100RMB/一年多，教育邮箱注册再升级相当于100RMB/700多天/每月200G，性价比也很高</p>
+<p>机场有人工客服可邮件咨询，节点很稳定，原生支持Clash客户端用起来很方便</p>
+<h3 id="其他机场">其他机场</h3>
+<p>瞎搞的时候发现了一个<a href="https://merlinblog.xyz/">宝藏网站</a>，上面有很多实用的知识和技巧，但网站需要科学上网才可以打开</p>
+<blockquote>
+<p>宝藏网站上的<a href="https://merlinblog.xyz/seetheworld.html">机场推荐</a></p>
+</blockquote>
+<h2 id="客户端推荐">客户端推荐</h2>
+<p>在不同平台上使用订阅链接会有不同的客户端，一般机场会有推荐的客户端，为简单可按照机场推荐操作。</p>
+<h3 id="v2raynv2rayng">V2RayN|V2rayNG</h3>
+<p>这是我最早使用的客户端代理软件，很多机场都直接提供基于该客户端的教程，可以运行在Windows(V2rayN)和Android(V2rayNG)上，支持Vmess等多种协议，在有较少的稳定节点或自建VPS时，用起来比较方便</p>
+<blockquote>
+<p>V2rayN下载链接：<a href="https://github.com/2dust/v2rayN/releases">Download(Github下载)</a> <a href="v2rayN.zip">v2rayN.zip(站点下载)</a></p>
+<p>V2rayNG下载链接：<a href="https://github.com/2dust/v2rayNG/releases">Download</a></p>
+</blockquote>
+<h3 id="clash">Clash</h3>
+<p>在租用机场时，可能当此指定的可用节点在下次就不太好用了，所以会有<strong>自动检测延时并自动选择最短延时节点</strong>的需求；另一方面，针对不同的使用场景，需要激活的节点并不相同——看油管使用HK节点，用Github使用US节点，即<strong>节点分流</strong>；同时还会有<strong>定时更新节点</strong>和<strong>临时局域网软路由</strong>等需求，这些Clash都可以实现</p>
+<p>这个软件还可以在linux系统上也可以使用，通过网页控制台进行策略调整和可视化，同时还支持Windows和Android</p>
+<blockquote>
+<p>Clash for Windows:<a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Download(Github下载)</a></p>
+<p>Clash for Android：<a href="https://glados.rocks/tools/cfa-2.5.4-premium-universal-release.apk">Download</a></p>
+</blockquote>
+<h3 id="小火箭">小火箭</h3>
+<p>苹果ios客户端公认最好用的客户端，下载需要用美区AppleID账号，并支付一点小钱，之后的配置和安卓端相似</p>
+<h2 id="安装指南">安装指南</h2>
+<p>写这部分的原因是：科学上网是一个悖论，教程和机场得翻出去才能看到和使用，但翻都翻出去了，还需要看教程吗？😂</p>
+<p>所以写这一部分是为了将墙外的教程搬过来，傻瓜操作翻墙：</p>
+<ol type="1">
+<li>获取订阅链接</li>
+<li>下载客户端</li>
+<li>在客户端中添加订阅链接</li>
+</ol>
+<h3 id="订阅链接">订阅链接</h3>
+<p>租用机场会有一个归属于注册账号的订阅链接，首次翻墙可以找同学借一个，之后有了自己的订阅链接用自己的即可</p>
+<h3 id="下载客户端">下载客户端</h3>
+<p>使用<del>朋友</del>提供的客户端（github国内访问很慢，自己下载不显示，但可以之后自己去上面更新），<strong>这里推荐使用Clash客户端</strong></p>
+<p><strong>【注意！！！】</strong>本文中的Android clash客户端可直接点击链接下载（<strong>无需翻墙</strong>）</p>
+<h3 id="添加订阅链接">添加订阅链接</h3>
+<p>机场一般都会在醒目位置显示账号的订阅链接，多数的机场也会有详细的配置教程，这里主要针对自己使用的两个机场和两个客户端，仅介绍Windows上的方法（<u>对其他设备，机场中有详细的配置教程</u>）</p>
+<h4 id="v2ray添加订阅链接">V2Ray添加订阅链接</h4>
+<ul>
+<li><strong>获取客户端</strong>：安装好客户端并打开（最好下载不是特别新的新版）</li>
+<li><strong>订阅节点</strong>：双击任务栏右下角<code>V2rayN</code>图标→订阅→订阅设置→添加→备注：<code>机场名字</code>→地址：<code>(机场订阅链接)</code>→确定；订阅→ 更新订阅→等待获取节点；</li>
+<li><strong>使用节点</strong>：右键点击任意节点→设为活动服务器；</li>
+</ul>
+<h4 id="clash添加订阅链接">Clash添加订阅链接</h4>
+<ul>
+<li><p><strong>获取客户端</strong>：下载0.11版本以上的客户端</p></li>
+<li><p><strong>订阅节点</strong>：（V0.19.5）在控制面版左侧：Profiles → 复制配置文件的URL到文本框中 → Download，会下载一个yaml或者yml配置文件 →选中右键进入Settings →Update Interval修改下方节点自动更新的时间（GGme推荐设置为18h，GlaDOS推荐24h）</p></li>
+<li><p><strong>使用节点</strong>：（V0.19.5）在控制面版左侧:Proxies → 选择节点 → 在控制面版左侧：General → 激活Systems Proxy</p>
+<blockquote>
+<p>URL链接一般形如https://xxx/xxx/xxx/xx.yaml或者https://xxx/xxx/xxx/xx.yml，看最后的文件后缀</p>
+</blockquote>
+<blockquote>
+<p>对于没有提供Clash支持的机场，比如上面的GGme，可以将订阅链接借助 <a href="https://github.com/tindy2013/subconverter">Subconverter</a> 工具进行封装，网上也有现成的API网页前端，可以在线生成（亲测下面这个蛮好用的）</p>
+<ul>
+<li><a href="https://bianyuan.xyz/">https://bianyuan.xyz</a></li>
+</ul>
+<p>自己生成的Clash链接可以先导入客户端，之后依据自己的需求对照教程对节点进行分类和修改</p>
+</blockquote></li>
+</ul>
+<p>关于<a href="https://www.codein.icu/clashtutorial/#features">Clash的教程</a>，这个写的很棒，有什么使用上的问题，可以直接对照学习</p>
+<p>之所以推荐Clash，是因为Clash可以依据使用者不同的使用需求，对节点进行<strong>分组</strong>，实现看视频用香港节点，访问github用美国节点，期间软件自动分流😁</p>
+<p>并可以设置分组属性，<u>自动探测多节点中延时|速度最快者，动态选择最优可用节点</u>，很适合机场多节点的情况（因为时不时单节点抽风，手动更换节点很麻烦，不知道哪个节点可用，也不知道哪个节点最好）</p>
+<p>使用Clash很省心，出现访问问题，关闭再开启代理，让软件自动选择即可，完全碾压V2ray</p>
+<h2 id="总结">总结</h2>
+<p>OK! 到这里你已经打开了新世界的大门! 起飞成功!✈</p>
+<p>一些感觉很棒的教程<a href="https://www.codein.icu/clashtutorial/#features">Clash的教程</a>（无需翻墙）和<a href="https://merlinblog.xyz/wikipageguide.html">宝藏网站</a>（需翻墙）🎉</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>科学上网</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客工作流</title>
+    <url>/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/</url>
+    <content><![CDATA[<p>写博客工作流，记录常用命令和实用技巧以备忘</p>
+<span id="more"></span>
+<hr />
+<h3 id="创作工作流">创作工作流</h3>
+<p>首先需要新建一个草稿，草稿中的文件最后是不会在线上部署，并自动会使用<code>scaffolds/</code>文件夹下，对应layout（page，draft，post）的模板</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;草稿文稿名字&quot;</span></span><br></pre></td></tr></table></figure>
+<p>预览草稿在本地的显示效果 server 时的<code>—-draft</code>参数</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo server --draft -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure>
+<p>在草稿上写好之后，就可以通过publish命令，将草稿无缝发布在<code>_posts</code>文件夹中</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish &lt;file_name&gt;</span><br></pre></td></tr></table></figure>
+<p>在draft中只需要专注于文稿正文部分主要内容，在publish到<code>_post</code>后</p>
+<blockquote>
+<p>打开相应的post并完善其中Abstract部分，更改Front Matter，赋予合适的Tag和Category分类，删除最上面的大标题，文稿中的标题从h2开始</p>
+</blockquote>
+<p>之后的按照部署的工作流进行部署</p>
+<h3 id="部署工作流">部署工作流</h3>
+<p>在<code>_posts</code>文件夹中写好相关的文件之后，整体的部署流程大致是：generate（生成静态文件）→server（部署在本地端口查看）→deploy（部署上线）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>本地查看时可能会遇到端口冲突 默认4000端口被占用，可以使用下面的命令，指定端口：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>有时本地查看的效果和线上不一致，可能是之前使用hexo版本比较老的缘故（hexo version:4.0+→6.1），升级之后再看一下</p>
+<p>本地查看效果无误后，将hexo的public清除，将全部文稿重新部署</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="提前需要配置好的选项">提前需要配置好的选项</h3>
+<p>在新建md文件时，需要一个和其同名的assert文件来存放图片、下载的文档和压缩包等，首先需要在根目录的<code>_config.yml</code>文件做如下修改：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>使用Typera写文档时，在<code>编辑器的文件/偏好设置/图像</code>中进行如下设置：</p>
+<figure>
+<img src="Hexo博客工作流/image.png" alt="image" /><figcaption>image</figcaption>
+</figure>
+<p>这样直接粘贴在md文件中的图片就自动保存在同名的assert文件中</p>
+<h3 id="hexo配置更新">hexo配置更新</h3>
+<p>在使用很久之后，hexo等博客网络框架的版本都有些老了，这里记录如何更新博客技术栈</p>
+<h4 id="node升级">Node升级</h4>
+<p>Windows系统中，使用命令行升级很麻烦，简单的方法是将之前的安装文件覆盖</p>
+<ul>
+<li><p>找到node的安装路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">where</span> node</span><br></pre></td></tr></table></figure></li>
+<li><p><a href="https://nodejs.org/en/">官网下载</a>对应安装包，安装在之前的路径中，并勾选将PATH加入系统路径中</p></li>
+<li><p>查看node和npm的版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v <span class="comment"># 查看node版本</span></span><br><span class="line">npm -v  <span class="comment"># 查看npm版本</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="hexo升级">Hexo升级</h4>
+<ol type="1">
+<li><p>全局升级hexo-cli</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>可以选定hexo版本特定升级</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo@6.1.0</span><br></pre></td></tr></table></figure></li>
+<li><p>使用npm-check检查系统插件是否有可以升级的</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g npm-check <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-check</span><br></pre></td></tr></table></figure></li>
+<li><p>使用npm-upgrade升级系统中的相关插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g npm-upgrade <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-upgrade</span><br></pre></td></tr></table></figure></li>
+<li><p>检查升级npm本身</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm update -g     <span class="comment"># 更新全局插件</span></span><br><span class="line">npm update --save <span class="comment"># 更新系统插件</span></span><br><span class="line">npm install -g npm</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Website</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -723,75 +792,6 @@ EDA设计
       </categories>
       <tags>
         <tag>Further education</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客工作流</title>
-    <url>/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/</url>
-    <content><![CDATA[<p>写博客工作流，记录常用命令和实用技巧以备忘</p>
-<span id="more"></span>
-<hr />
-<h3 id="创作工作流">创作工作流</h3>
-<p>首先需要新建一个草稿，草稿中的文件最后是不会在线上部署，并自动会使用<code>scaffolds/</code>文件夹下，对应layout（page，draft，post）的模板</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;草稿文稿名字&quot;</span></span><br></pre></td></tr></table></figure>
-<p>预览草稿在本地的显示效果 server 时的<code>—-draft</code>参数</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo server --draft -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure>
-<p>在草稿上写好之后，就可以通过publish命令，将草稿无缝发布在<code>_posts</code>文件夹中</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish &lt;file_name&gt;</span><br></pre></td></tr></table></figure>
-<p>在draft中只需要专注于文稿正文部分主要内容，在publish到<code>_post</code>后</p>
-<blockquote>
-<p>打开相应的post并完善其中Abstract部分，更改Front Matter，赋予合适的Tag和Category分类，删除最上面的大标题，文稿中的标题从h2开始</p>
-</blockquote>
-<p>之后的按照部署的工作流进行部署</p>
-<h3 id="部署工作流">部署工作流</h3>
-<p>在<code>_posts</code>文件夹中写好相关的文件之后，整体的部署流程大致是：generate（生成静态文件）→server（部署在本地端口查看）→deploy（部署上线）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>本地查看时可能会遇到端口冲突 默认4000端口被占用，可以使用下面的命令，指定端口：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>有时本地查看的效果和线上不一致，可能是之前使用hexo版本比较老的缘故（hexo version:4.0+→6.1），升级之后再看一下</p>
-<p>本地查看效果无误后，将hexo的public清除，将全部文稿重新部署</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<h3 id="提前需要配置好的选项">提前需要配置好的选项</h3>
-<p>在新建md文件时，需要一个和其同名的assert文件来存放图片、下载的文档和压缩包等，首先需要在根目录的<code>_config.yml</code>文件做如下修改：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>使用Typera写文档时，在<code>编辑器的文件/偏好设置/图像</code>中进行如下设置：</p>
-<figure>
-<img src="Hexo博客工作流/image.png" alt="image" /><figcaption>image</figcaption>
-</figure>
-<p>这样直接粘贴在md文件中的图片就自动保存在同名的assert文件中</p>
-<h3 id="hexo配置更新">hexo配置更新</h3>
-<p>在使用很久之后，hexo等博客网络框架的版本都有些老了，这里记录如何更新博客技术栈</p>
-<h4 id="node升级">Node升级</h4>
-<p>Windows系统中，使用命令行升级很麻烦，简单的方法是将之前的安装文件覆盖</p>
-<ul>
-<li><p>找到node的安装路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">where</span> node</span><br></pre></td></tr></table></figure></li>
-<li><p><a href="https://nodejs.org/en/">官网下载</a>对应安装包，安装在之前的路径中，并勾选将PATH加入系统路径中</p></li>
-<li><p>查看node和npm的版本</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v <span class="comment"># 查看node版本</span></span><br><span class="line">npm -v  <span class="comment"># 查看npm版本</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="hexo升级">Hexo升级</h4>
-<ol type="1">
-<li><p>全局升级hexo-cli</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>可以选定hexo版本特定升级</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo@6.1.0</span><br></pre></td></tr></table></figure></li>
-<li><p>使用npm-check检查系统插件是否有可以升级的</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g npm-check <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-check</span><br></pre></td></tr></table></figure></li>
-<li><p>使用npm-upgrade升级系统中的相关插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g npm-upgrade <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-upgrade</span><br></pre></td></tr></table></figure></li>
-<li><p>检查升级npm本身</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm update -g     <span class="comment"># 更新全局插件</span></span><br><span class="line">npm update --save <span class="comment"># 更新系统插件</span></span><br><span class="line">npm install -g npm</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Website</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
