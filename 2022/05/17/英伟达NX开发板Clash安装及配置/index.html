@@ -21,22 +21,20 @@
     var CONFIG = {"hostname":"zafirshi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="写博客工作流，记录常用命令和实用技巧以备忘">
+  <meta name="description" content="使用英伟达开发板的过程中，发现下载资料，配置环境和Github上查看代码时比较麻烦，索性直接安装Clash for Linux代理科学上网。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客工作流">
-<meta property="og:url" content="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/index.html">
+<meta property="og:title" content="英伟达NX开发板Clash安装及配置">
+<meta property="og:url" content="http://zafirshi.github.io/2022/05/17/%E8%8B%B1%E4%BC%9F%E8%BE%BENX%E5%BC%80%E5%8F%91%E6%9D%BFClash%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Zafirshi&#39;s Blog">
-<meta property="og:description" content="写博客工作流，记录常用命令和实用技巧以备忘">
+<meta property="og:description" content="使用英伟达开发板的过程中，发现下载资料，配置环境和Github上查看代码时比较麻烦，索性直接安装Clash for Linux代理科学上网。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/Hexo博客工作流/image.png">
-<meta property="article:published_time" content="2022-03-28T15:05:12.000Z">
-<meta property="article:modified_time" content="2022-03-28T15:29:06.527Z">
+<meta property="article:published_time" content="2022-05-17T05:56:24.000Z">
+<meta property="article:modified_time" content="2022-05-17T15:12:53.076Z">
 <meta property="article:author" content="Zafirshi">
-<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Hardware">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/Hexo博客工作流/image.png">
 
-<link rel="canonical" href="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/">
+<link rel="canonical" href="http://zafirshi.github.io/2022/05/17/%E8%8B%B1%E4%BC%9F%E8%BE%BENX%E5%BC%80%E5%8F%91%E6%9D%BFClash%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/">
 
 
 <script id="page-configurations">
@@ -49,7 +47,7 @@
   };
 </script>
 
-  <title>Hexo博客工作流 | Zafirshi's Blog</title>
+  <title>英伟达NX开发板Clash安装及配置 | Zafirshi's Blog</title>
   
 
 
@@ -204,7 +202,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/">
+    <link itemprop="mainEntityOfPage" href="http://zafirshi.github.io/2022/05/17/%E8%8B%B1%E4%BC%9F%E8%BE%BENX%E5%BC%80%E5%8F%91%E6%9D%BFClash%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -217,7 +215,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo博客工作流
+          英伟达NX开发板Clash安装及配置
         </h1>
 
         <div class="post-meta">
@@ -228,7 +226,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-28 23:05:12 / 修改时间：23:29:06" itemprop="dateCreated datePublished" datetime="2022-03-28T23:05:12+08:00">2022-03-28</time>
+              <time title="创建时间：2022-05-17 13:56:24 / 修改时间：23:12:53" itemprop="dateCreated datePublished" datetime="2022-05-17T13:56:24+08:00">2022-05-17</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -236,11 +234,11 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                  <a href="/categories/Project/" itemprop="url" rel="index"><span itemprop="name">Project</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Study/Website/" itemprop="url" rel="index"><span itemprop="name">Website</span></a>
+                  <a href="/categories/Project/Deployment/" itemprop="url" rel="index"><span itemprop="name">Deployment</span></a>
                 </span>
             </span>
 
@@ -257,7 +255,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.4k</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -276,62 +274,48 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>写博客工作流，记录常用命令和实用技巧以备忘</p>
+        <p>使用英伟达开发板的过程中，发现下载资料，配置环境和Github上查看代码时比较麻烦，索性直接安装Clash for Linux代理科学上网。</p>
 <span id="more"></span>
 <hr />
-<h3 id="创作工作流">创作工作流</h3>
-<p>首先需要新建一个草稿，草稿中的文件最后是不会在线上部署，并自动会使用<code>scaffolds/</code>文件夹下，对应layout（page，draft，post）的模板</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;草稿文稿名字&quot;</span></span><br></pre></td></tr></table></figure>
-<p>预览草稿在本地的显示效果 server 时的<code>—-draft</code>参数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo server --draft -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure>
-<p>在草稿上写好之后，就可以通过publish命令，将草稿无缝发布在<code>_posts</code>文件夹中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish &lt;file_name&gt;</span><br></pre></td></tr></table></figure>
-<p>在draft中只需要专注于文稿正文部分主要内容，在publish到<code>_post</code>后</p>
 <blockquote>
-<p>打开相应的post并完善其中Abstract部分，更改Front Matter，赋予合适的Tag和Category分类，删除最上面的大标题，文稿中的标题从h2开始</p>
+<p>Clash for windows可视化界面不支持在树莓派和nvidia nx等嵌入式开发板（<strong>arm架构</strong>）上使用（在安装时会解析错误）<del>当然Ubuntu（<strong>amd64架构</strong>）上是支持的</del></p>
 </blockquote>
-<p>之后的按照部署的工作流进行部署</p>
-<h3 id="部署工作流">部署工作流</h3>
-<p>在<code>_posts</code>文件夹中写好相关的文件之后，整体的部署流程大致是：generate（生成静态文件）→server（部署在本地端口查看）→deploy（部署上线）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>本地查看时可能会遇到端口冲突 默认4000端口被占用，可以使用下面的命令，指定端口：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>有时本地查看的效果和线上不一致，可能是之前使用hexo版本比较老的缘故（hexo version:4.0+→6.1），升级之后再看一下</p>
-<p>本地查看效果无误后，将hexo的public清除，将全部文稿重新部署</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<h3 id="提前需要配置好的选项">提前需要配置好的选项</h3>
-<p>在新建md文件时，需要一个和其同名的assert文件来存放图片、下载的文档和压缩包等，首先需要在根目录的<code>_config.yml</code>文件做如下修改：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>使用Typera写文档时，在<code>编辑器的文件/偏好设置/图像</code>中进行如下设置：</p>
-<figure>
-<img src="Hexo博客工作流/image.png" alt="image" /><figcaption>image</figcaption>
-</figure>
-<p>这样直接粘贴在md文件中的图片就自动保存在同名的assert文件中</p>
-<h3 id="hexo配置更新">hexo配置更新</h3>
-<p>在使用很久之后，hexo等博客网络框架的版本都有些老了，这里记录如何更新博客技术栈</p>
-<h4 id="node升级">Node升级</h4>
-<p>Windows系统中，使用命令行升级很麻烦，简单的方法是将之前的安装文件覆盖</p>
-<ul>
-<li><p>找到node的安装路径</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">where</span> node</span><br></pre></td></tr></table></figure></li>
-<li><p><a target="_blank" rel="noopener" href="https://nodejs.org/en/">官网下载</a>对应安装包，安装在之前的路径中，并勾选将PATH加入系统路径中</p></li>
-<li><p>查看node和npm的版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v <span class="comment"># 查看node版本</span></span><br><span class="line">npm -v  <span class="comment"># 查看npm版本</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="hexo升级">Hexo升级</h4>
+<h2 id="查看板子的系统版本">查看板子的系统版本</h2>
+<p>Clash核心针对不同硬件核心有不同的运行版本，因此先要查看开发板的硬件信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /proc/version  <span class="comment"># 查询操作系统版本</span></span><br><span class="line"><span class="built_in">cat</span> /proc/cpuinfo  <span class="comment"># 查询主板版本</span></span><br></pre></td></tr></table></figure>
+<p>查询到Nvidia nx开发板的6 cores架构均为：<strong>ARMv8</strong>处理器</p>
+<h2 id="下载正确的clash版本">下载正确的Clash版本</h2>
 <ol type="1">
-<li><p>全局升级hexo-cli</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>可以选定hexo版本特定升级</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo@6.1.0</span><br></pre></td></tr></table></figure></li>
-<li><p>使用npm-check检查系统插件是否有可以升级的</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm-check <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-check</span><br></pre></td></tr></table></figure></li>
-<li><p>使用npm-upgrade升级系统中的相关插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm-upgrade <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-upgrade</span><br></pre></td></tr></table></figure></li>
-<li><p>检查升级npm本身</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm update -g     <span class="comment"># 更新全局插件</span></span><br><span class="line">npm update --save <span class="comment"># 更新系统插件</span></span><br><span class="line">npm install -g npm</span><br></pre></td></tr></table></figure></li>
+<li><p>在<a target="_blank" rel="noopener" href="https://github.com/Dreamacro/clash/releases/tag/v1.10.6" title="GitHub">GitHub</a>主页中查找对应版本的clash程序并下载：国内加速下载<a target="_blank" rel="noopener" href="https://github.91chi.fun//https://github.com//Dreamacro/clash/releases/download/v1.10.6/clash-linux-armv8-v1.10.6.gz" title="链接">链接</a></p></li>
+<li><p>解压压缩包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo unzip clash.zip  <span class="comment"># 填写正确的压缩包名称</span></span><br></pre></td></tr></table></figure></li>
+<li><p>更改解压出来文件的权限（可执行）并将其转移到根目录下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">chmod</span> +x clash <span class="comment"># 更改文件权限为可执行</span></span><br><span class="line">sudo <span class="built_in">mv</span> clash /usr/local/bin/clash <span class="comment"># 放在bin目录下，可直接输入clash命令行运行配置</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="clash配置">Clash配置</h2>
+<ol type="1">
+<li><p>运行（第一次会报错）→会在<code>/home/用户名/.config/clash</code>路径下生成代理配置文件<code>config.yaml</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo clash <span class="comment"># 会报错</span></span><br></pre></td></tr></table></figure></li>
+<li><p>从机场下载<code>yaml</code>配置文件，以及<code>mmdb</code>文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/用户名/.config/clash   <span class="comment"># 进入配置文件目录</span></span><br><span class="line">sudo wget -O config.yaml [机场订阅链接]   <span class="comment"># 访问获取yaml文件</span></span><br><span class="line">sudo wget -O Country.mmdb https://www.sub-speeder.com/client-download/Country.mmdb  <span class="comment"># 访问获取mmdb文件</span></span><br></pre></td></tr></table></figure></li>
+<li><p>运行（配置好上面两个文件后，不出意外可运行成功）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo clash <span class="comment"># 这次不会报错</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="系统代理配置">系统代理配置</h2>
+<ol type="1">
+<li><p>配置系统代理： System setting→Network→Network proxy→MethodManual→HTTP、Socks代理按照<code>config.yaml</code>文件最上端的信息修改：</p>
+<blockquote>
+<p>HTTP设置为：127.0.0.1:7890</p>
+<p>Socks设置为：127.0.0.1:7891</p>
+</blockquote></li>
+<li><p>可以直接在浏览器上科学上网了，可以选用<strong>tmux</strong>运行clash以使得会话和窗口分离</p></li>
+</ol>
+<hr />
+<p>参考资料：</p>
+<ol type="1">
+<li>配置查询参考：<a target="_blank" rel="noopener" href="https://github.com/Dreamacro/clash/issues/378" class="uri">https://github.com/Dreamacro/clash/issues/378</a></li>
+<li>树莓派的安装教程：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/396272999" class="uri">https://zhuanlan.zhihu.com/p/396272999</a></li>
+<li>MMDB文件下载及配置方法：<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/wp-statistics/GeoLite2-Country/master/GeoLite2-Country.mmdb.gz" class="uri">https://raw.githubusercontent.com/wp-statistics/GeoLite2-Country/master/GeoLite2-Country.mmdb.gz</a></li>
 </ol>
 
     </div>
@@ -348,7 +332,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/" title="Hexo博客工作流">http://zafirshi.github.io/2022/03/28/Hexo博客工作流/</a>
+    <a href="http://zafirshi.github.io/2022/05/17/%E8%8B%B1%E4%BC%9F%E8%BE%BENX%E5%BC%80%E5%8F%91%E6%9D%BFClash%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/" title="英伟达NX开发板Clash安装及配置">http://zafirshi.github.io/2022/05/17/英伟达NX开发板Clash安装及配置/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -360,7 +344,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+              <a href="/tags/Hardware/" rel="tag"><i class="fa fa-tag"></i> Hardware</a>
           </div>
 
         
@@ -369,13 +353,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/02/02/Latex/" rel="prev" title="Latex语法">
-      <i class="fa fa-chevron-left"></i> Latex语法
+    <a href="/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/" rel="prev" title="Hexo博客工作流">
+      <i class="fa fa-chevron-left"></i> Hexo博客工作流
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/05/17/%E8%8B%B1%E4%BC%9F%E8%BE%BENX%E5%BC%80%E5%8F%91%E6%9D%BFClash%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/" rel="next" title="英伟达NX开发板Clash安装及配置">
-      英伟达NX开发板Clash安装及配置 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -435,7 +416,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">1.</span> <span class="nav-text">创作工作流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">2.</span> <span class="nav-text">部署工作流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E5%89%8D%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AE%E5%A5%BD%E7%9A%84%E9%80%89%E9%A1%B9"><span class="nav-number">3.</span> <span class="nav-text">提前需要配置好的选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo%E9%85%8D%E7%BD%AE%E6%9B%B4%E6%96%B0"><span class="nav-number">4.</span> <span class="nav-text">hexo配置更新</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%9D%BF%E5%AD%90%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC"><span class="nav-number">1.</span> <span class="nav-text">查看板子的系统版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E6%AD%A3%E7%A1%AE%E7%9A%84clash%E7%89%88%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">下载正确的Clash版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clash%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">Clash配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">系统代理配置</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -664,7 +645,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'zafirshi.github.io',
       owner       : 'zafirshi',
       admin       : ['zafirshi'],
-      id          : 'f9e0477e36f804baacdedf3fc35bda73',
+      id          : '3cb06dca05786eab35fdc526abdec3b8',
         language: '',
       distractionFreeMode: true
     });
