@@ -292,6 +292,61 @@
       </tags>
   </entry>
   <entry>
+    <title>英伟达NX开发板Clash安装及配置</title>
+    <url>/2022/05/17/%E8%8B%B1%E4%BC%9F%E8%BE%BENX%E5%BC%80%E5%8F%91%E6%9D%BFClash%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>使用英伟达开发板的过程中，发现下载资料，配置环境和Github上查看代码时比较麻烦，索性直接安装Clash for Linux代理科学上网。</p>
+<span id="more"></span>
+<hr />
+<blockquote>
+<p>Clash for windows可视化界面不支持在树莓派和nvidia nx等嵌入式开发板（<strong>arm架构</strong>）上使用（在安装时会解析错误）<del>当然Ubuntu（<strong>amd64架构</strong>）上是支持的</del></p>
+</blockquote>
+<h2 id="查看板子的系统版本">查看板子的系统版本</h2>
+<p>Clash核心针对不同硬件核心有不同的运行版本，因此先要查看开发板的硬件信息</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /proc/version  <span class="comment"># 查询操作系统版本</span></span><br><span class="line"><span class="built_in">cat</span> /proc/cpuinfo  <span class="comment"># 查询主板版本</span></span><br></pre></td></tr></table></figure>
+<p>查询到Nvidia nx开发板的6 cores架构均为：<strong>ARMv8</strong>处理器</p>
+<h2 id="下载正确的clash版本">下载正确的Clash版本</h2>
+<ol type="1">
+<li><p>在<a href="https://github.com/Dreamacro/clash/releases/tag/v1.10.6" title="GitHub">GitHub</a>主页中查找对应版本的clash程序并下载：国内加速下载<a href="https://github.91chi.fun//https://github.com//Dreamacro/clash/releases/download/v1.10.6/clash-linux-armv8-v1.10.6.gz" title="链接">链接</a></p></li>
+<li><p>解压压缩包</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo unzip clash.zip  <span class="comment"># 填写正确的压缩包名称</span></span><br></pre></td></tr></table></figure></li>
+<li><p>更改解压出来文件的权限（可执行）并将其转移到根目录下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">chmod</span> +x clash <span class="comment"># 更改文件权限为可执行</span></span><br><span class="line">sudo <span class="built_in">mv</span> clash /usr/local/bin/clash <span class="comment"># 放在bin目录下，可直接输入clash命令行运行配置</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="clash配置">Clash配置</h2>
+<ol type="1">
+<li><p>运行（第一次会报错）→会在<code>/home/用户名/.config/clash</code>路径下生成代理配置文件<code>config.yaml</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo clash <span class="comment"># 会报错</span></span><br></pre></td></tr></table></figure></li>
+<li><p>从机场下载<code>yaml</code>配置文件，以及<code>mmdb</code>文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/用户名/.config/clash   <span class="comment"># 进入配置文件目录</span></span><br><span class="line">sudo wget -O config.yaml [机场订阅链接]   <span class="comment"># 访问获取yaml文件</span></span><br><span class="line">sudo wget -O Country.mmdb https://www.sub-speeder.com/client-download/Country.mmdb  <span class="comment"># 访问获取mmdb文件</span></span><br></pre></td></tr></table></figure></li>
+<li><p>运行（配置好上面两个文件后，不出意外可运行成功）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo clash <span class="comment"># 这次不会报错</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="系统代理配置">系统代理配置</h2>
+<ol type="1">
+<li><p>配置系统代理： System setting→Network→Network proxy→MethodManual→HTTP、Socks代理按照<code>config.yaml</code>文件最上端的信息修改：</p>
+<blockquote>
+<p>HTTP设置为：127.0.0.1:7890</p>
+<p>Socks设置为：127.0.0.1:7891</p>
+</blockquote></li>
+<li><p>可以直接在浏览器上科学上网了，可以选用<strong>tmux</strong>运行clash以使得会话和窗口分离</p></li>
+</ol>
+<hr />
+<p>参考资料：</p>
+<ol type="1">
+<li>配置查询参考：<a href="https://github.com/Dreamacro/clash/issues/378" class="uri">https://github.com/Dreamacro/clash/issues/378</a></li>
+<li>树莓派的安装教程：<a href="https://zhuanlan.zhihu.com/p/396272999" class="uri">https://zhuanlan.zhihu.com/p/396272999</a></li>
+<li>MMDB文件下载及配置方法：<a href="https://raw.githubusercontent.com/wp-statistics/GeoLite2-Country/master/GeoLite2-Country.mmdb.gz" class="uri">https://raw.githubusercontent.com/wp-statistics/GeoLite2-Country/master/GeoLite2-Country.mmdb.gz</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Project</category>
+        <category>Deployment</category>
+      </categories>
+      <tags>
+        <tag>Hardware</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客工作流</title>
     <url>/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/</url>
     <content><![CDATA[<p>写博客工作流，记录常用命令和实用技巧以备忘</p>
@@ -358,61 +413,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英伟达NX开发板Clash安装及配置</title>
-    <url>/2022/05/17/%E8%8B%B1%E4%BC%9F%E8%BE%BENX%E5%BC%80%E5%8F%91%E6%9D%BFClash%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p>使用英伟达开发板的过程中，发现下载资料，配置环境和Github上查看代码时比较麻烦，索性直接安装Clash for Linux代理科学上网。</p>
-<span id="more"></span>
-<hr />
-<blockquote>
-<p>Clash for windows可视化界面不支持在树莓派和nvidia nx等嵌入式开发板（<strong>arm架构</strong>）上使用（在安装时会解析错误）<del>当然Ubuntu（<strong>amd64架构</strong>）上是支持的</del></p>
-</blockquote>
-<h2 id="查看板子的系统版本">查看板子的系统版本</h2>
-<p>Clash核心针对不同硬件核心有不同的运行版本，因此先要查看开发板的硬件信息</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /proc/version  <span class="comment"># 查询操作系统版本</span></span><br><span class="line"><span class="built_in">cat</span> /proc/cpuinfo  <span class="comment"># 查询主板版本</span></span><br></pre></td></tr></table></figure>
-<p>查询到Nvidia nx开发板的6 cores架构均为：<strong>ARMv8</strong>处理器</p>
-<h2 id="下载正确的clash版本">下载正确的Clash版本</h2>
-<ol type="1">
-<li><p>在<a href="https://github.com/Dreamacro/clash/releases/tag/v1.10.6" title="GitHub">GitHub</a>主页中查找对应版本的clash程序并下载：国内加速下载<a href="https://github.91chi.fun//https://github.com//Dreamacro/clash/releases/download/v1.10.6/clash-linux-armv8-v1.10.6.gz" title="链接">链接</a></p></li>
-<li><p>解压压缩包</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo unzip clash.zip  <span class="comment"># 填写正确的压缩包名称</span></span><br></pre></td></tr></table></figure></li>
-<li><p>更改解压出来文件的权限（可执行）并将其转移到根目录下</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">chmod</span> +x clash <span class="comment"># 更改文件权限为可执行</span></span><br><span class="line">sudo <span class="built_in">mv</span> clash /usr/local/bin/clash <span class="comment"># 放在bin目录下，可直接输入clash命令行运行配置</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="clash配置">Clash配置</h2>
-<ol type="1">
-<li><p>运行（第一次会报错）→会在<code>/home/用户名/.config/clash</code>路径下生成代理配置文件<code>config.yaml</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo clash <span class="comment"># 会报错</span></span><br></pre></td></tr></table></figure></li>
-<li><p>从机场下载<code>yaml</code>配置文件，以及<code>mmdb</code>文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/用户名/.config/clash   <span class="comment"># 进入配置文件目录</span></span><br><span class="line">sudo wget -O config.yaml [机场订阅链接]   <span class="comment"># 访问获取yaml文件</span></span><br><span class="line">sudo wget -O Country.mmdb https://www.sub-speeder.com/client-download/Country.mmdb  <span class="comment"># 访问获取mmdb文件</span></span><br></pre></td></tr></table></figure></li>
-<li><p>运行（配置好上面两个文件后，不出意外可运行成功）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo clash <span class="comment"># 这次不会报错</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="系统代理配置">系统代理配置</h2>
-<ol type="1">
-<li><p>配置系统代理： System setting→Network→Network proxy→MethodManual→HTTP、Socks代理按照<code>config.yaml</code>文件最上端的信息修改：</p>
-<blockquote>
-<p>HTTP设置为：127.0.0.1:7890</p>
-<p>Socks设置为：127.0.0.1:7891</p>
-</blockquote></li>
-<li><p>可以直接在浏览器上科学上网了，可以选用<strong>tmux</strong>运行clash以使得会话和窗口分离</p></li>
-</ol>
-<hr />
-<p>参考资料：</p>
-<ol type="1">
-<li>配置查询参考：<a href="https://github.com/Dreamacro/clash/issues/378" class="uri">https://github.com/Dreamacro/clash/issues/378</a></li>
-<li>树莓派的安装教程：<a href="https://zhuanlan.zhihu.com/p/396272999" class="uri">https://zhuanlan.zhihu.com/p/396272999</a></li>
-<li>MMDB文件下载及配置方法：<a href="https://raw.githubusercontent.com/wp-statistics/GeoLite2-Country/master/GeoLite2-Country.mmdb.gz" class="uri">https://raw.githubusercontent.com/wp-statistics/GeoLite2-Country/master/GeoLite2-Country.mmdb.gz</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Project</category>
-        <category>Deployment</category>
-      </categories>
-      <tags>
-        <tag>Hardware</tag>
       </tags>
   </entry>
   <entry>
@@ -662,6 +662,56 @@
       <tags>
         <tag>Ubuntu</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux系统启动报错:Unexepcted inconsistency:RUN fsck MANUALLY</title>
+    <url>/2022/10/31/Linux%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99-Unexepcted-inconsistency-RUN/</url>
+    <content><![CDATA[<p>Ubuntu18.04在运行程序时卡死，强制重启后，无法进入图像化界面的<strong>解决方案</strong></p>
+<span id="more"></span>
+<hr />
+<h2 id="问题成因">问题成因</h2>
+<p>运行程序时，电脑在数据IO阶段卡死（猜测可能是内存溢出），鼠标和键盘操作均无响应后，长按电源键重启</p>
+<p>重启后无法进入图形化界面，命令行显示报错</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">/dev/sda1: UNEXECEPTED INCONSISTENCY: RUN fsck MANUALLY</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>系统报错命令很长，截取最重要的部分如上</p>
+<p>之后查询资料中：据说这个问题是和金士顿的固态硬盘有关</p>
+<p>可能是强制重启导致Ubuntu18.04系统读取文件异常，无法识别正确的文件分区</p>
+<h2 id="解决方法">解决方法</h2>
+<p>可以看到系统在<code>/dev/sda1</code>报错，依据系统提示，在下面的命令行提示符后面输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fsck -y /dev/sda1</span><br></pre></td></tr></table></figure>
+<p>Note:上面提示哪个位置报错，在这里就修复哪一个（这里<code>/dev/sda1</code>报错，故 <code>fsck -y</code>后面修复<code>/dev/sda1</code>）</p>
+<p>之后输入命令重启：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<p>在重启之后可能还会遇到下面的问题</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">[    777837]ACPI Exception: ....</span><br><span class="line">[    777375]ACPI Error[BUG]: ....</span><br><span class="line">...</span><br><span class="line">Welcome to emergency mode!After logging <span class="keyword">in</span>, <span class="built_in">type</span> <span class="string">&quot;journalctl -xb&quot;</span> to view system logs. <span class="string">&quot;systemctl reboot&quot;</span> to reboot, <span class="string">&quot;systemctl default&quot;</span> or ^D to try again to boot into default mode.</span><br><span class="line">Give root password <span class="keyword">for</span> maintenance.</span><br><span class="line">(or press Ctrl+D to continune):</span><br></pre></td></tr></table></figure>
+<p>按下回车后，在命令行中输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">journalctl -xb</span><br></pre></td></tr></table></figure>
+<p>查看系统日志，按空格键快速向下翻页</p>
+<p>可以找到在日志中找到类似下面的报错</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">/dev/sda2: UNEXECEPTED INCONSISTENCY: FAILED</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>这是说明还需要修复指定的挂载点</p>
+<p>例如，这里是<code>/dev/sda2</code>报错，按下ESC后输入<code>:wq</code>退出到命令行（类似Vim），执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fsck -y /dev/sda2</span><br></pre></td></tr></table></figure>
+<p>重复上述修复过程，便可正常开机进入图形化系统界面</p>
+<h2 id="ubuntu安全重启方法">Ubuntu安全重启方法</h2>
+<p>无论出现什么情况，都不要尝试强制重启，会变得不幸</p>
+<p>一定要安全重启：</p>
+<ol type="1">
+<li>同时按住Ctrl和Alt键，一直按住不放</li>
+<li>按一下SysRq键（有些键盘上是PrtSc键）</li>
+<li>按一下R键</li>
+<li>按一下E键</li>
+<li>依次按一下I，S，U，B键</li>
+</ol>
+<p>这些完成后，系统会安全重启，很Nice！</p>
+]]></content>
+      <categories>
+        <category>Bug</category>
+        <category>Hardware</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
