@@ -112,75 +112,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客工作流</title>
-    <url>/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/</url>
-    <content><![CDATA[<p>写博客工作流，记录常用命令和实用技巧以备忘</p>
-<span id="more"></span>
-<hr />
-<h3 id="创作工作流">创作工作流</h3>
-<p>首先需要新建一个草稿，草稿中的文件最后是不会在线上部署，并自动会使用<code>scaffolds/</code>文件夹下，对应layout（page，draft，post）的模板</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;草稿文稿名字&quot;</span></span><br></pre></td></tr></table></figure>
-<p>预览草稿在本地的显示效果 server 时的<code>—-draft</code>参数</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo server --draft -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure>
-<p>在草稿上写好之后，就可以通过publish命令，将草稿无缝发布在<code>_posts</code>文件夹中</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish &lt;file_name&gt;</span><br></pre></td></tr></table></figure>
-<p>在draft中只需要专注于文稿正文部分主要内容，在publish到<code>_post</code>后</p>
-<blockquote>
-<p>打开相应的post并完善其中Abstract部分，更改Front Matter，赋予合适的Tag和Category分类，删除最上面的大标题，文稿中的标题从h2开始</p>
-</blockquote>
-<p>之后的按照部署的工作流进行部署</p>
-<h3 id="部署工作流">部署工作流</h3>
-<p>在<code>_posts</code>文件夹中写好相关的文件之后，整体的部署流程大致是：generate（生成静态文件）→server（部署在本地端口查看）→deploy（部署上线）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>本地查看时可能会遇到端口冲突 默认4000端口被占用，可以使用下面的命令，指定端口：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>有时本地查看的效果和线上不一致，可能是之前使用hexo版本比较老的缘故（hexo version:4.0+→6.1），升级之后再看一下</p>
-<p>本地查看效果无误后，将hexo的public清除，将全部文稿重新部署</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<h3 id="提前需要配置好的选项">提前需要配置好的选项</h3>
-<p>在新建md文件时，需要一个和其同名的assert文件来存放图片、下载的文档和压缩包等，首先需要在根目录的<code>_config.yml</code>文件做如下修改：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>使用Typera写文档时，在<code>编辑器的文件/偏好设置/图像</code>中进行如下设置：</p>
-<figure>
-<img src="Hexo博客工作流/image.png" alt="image" /><figcaption>image</figcaption>
-</figure>
-<p>这样直接粘贴在md文件中的图片就自动保存在同名的assert文件中</p>
-<h3 id="hexo配置更新">hexo配置更新</h3>
-<p>在使用很久之后，hexo等博客网络框架的版本都有些老了，这里记录如何更新博客技术栈</p>
-<h4 id="node升级">Node升级</h4>
-<p>Windows系统中，使用命令行升级很麻烦，简单的方法是将之前的安装文件覆盖</p>
-<ul>
-<li><p>找到node的安装路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">where</span> node</span><br></pre></td></tr></table></figure></li>
-<li><p><a href="https://nodejs.org/en/">官网下载</a>对应安装包，安装在之前的路径中，并勾选将PATH加入系统路径中</p></li>
-<li><p>查看node和npm的版本</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v <span class="comment"># 查看node版本</span></span><br><span class="line">npm -v  <span class="comment"># 查看npm版本</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="hexo升级">Hexo升级</h4>
-<ol type="1">
-<li><p>全局升级hexo-cli</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>可以选定hexo版本特定升级</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo@6.1.0</span><br></pre></td></tr></table></figure></li>
-<li><p>使用npm-check检查系统插件是否有可以升级的</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g npm-check <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-check</span><br></pre></td></tr></table></figure></li>
-<li><p>使用npm-upgrade升级系统中的相关插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g npm-upgrade <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-upgrade</span><br></pre></td></tr></table></figure></li>
-<li><p>检查升级npm本身</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm update -g     <span class="comment"># 更新全局插件</span></span><br><span class="line">npm update --save <span class="comment"># 更新系统插件</span></span><br><span class="line">npm install -g npm</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Website</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Latex语法</title>
     <url>/2022/02/02/Latex/</url>
     <content><![CDATA[<p>Latex基本语法的快速入门（Updating），为自己快速查找回想指令</p>
@@ -413,6 +344,75 @@
       </categories>
       <tags>
         <tag>Hardware</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客工作流</title>
+    <url>/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/</url>
+    <content><![CDATA[<p>写博客工作流，记录常用命令和实用技巧以备忘</p>
+<span id="more"></span>
+<hr />
+<h3 id="创作工作流">创作工作流</h3>
+<p>首先需要新建一个草稿，草稿中的文件最后是不会在线上部署，并自动会使用<code>scaffolds/</code>文件夹下，对应layout（page，draft，post）的模板</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;草稿文稿名字&quot;</span></span><br></pre></td></tr></table></figure>
+<p>预览草稿在本地的显示效果 server 时的<code>—-draft</code>参数</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo server --draft -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure>
+<p>在草稿上写好之后，就可以通过publish命令，将草稿无缝发布在<code>_posts</code>文件夹中</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish &lt;file_name&gt;</span><br></pre></td></tr></table></figure>
+<p>在draft中只需要专注于文稿正文部分主要内容，在publish到<code>_post</code>后</p>
+<blockquote>
+<p>打开相应的post并完善其中Abstract部分，更改Front Matter，赋予合适的Tag和Category分类，删除最上面的大标题，文稿中的标题从h2开始</p>
+</blockquote>
+<p>之后的按照部署的工作流进行部署</p>
+<h3 id="部署工作流">部署工作流</h3>
+<p>在<code>_posts</code>文件夹中写好相关的文件之后，整体的部署流程大致是：generate（生成静态文件）→server（部署在本地端口查看）→deploy（部署上线）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>本地查看时可能会遇到端口冲突 默认4000端口被占用，可以使用下面的命令，指定端口：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>有时本地查看的效果和线上不一致，可能是之前使用hexo版本比较老的缘故（hexo version:4.0+→6.1），升级之后再看一下</p>
+<p>本地查看效果无误后，将hexo的public清除，将全部文稿重新部署</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="提前需要配置好的选项">提前需要配置好的选项</h3>
+<p>在新建md文件时，需要一个和其同名的assert文件来存放图片、下载的文档和压缩包等，首先需要在根目录的<code>_config.yml</code>文件做如下修改：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>使用Typera写文档时，在<code>编辑器的文件/偏好设置/图像</code>中进行如下设置：</p>
+<figure>
+<img src="Hexo博客工作流/image.png" alt="image" /><figcaption>image</figcaption>
+</figure>
+<p>这样直接粘贴在md文件中的图片就自动保存在同名的assert文件中</p>
+<h3 id="hexo配置更新">hexo配置更新</h3>
+<p>在使用很久之后，hexo等博客网络框架的版本都有些老了，这里记录如何更新博客技术栈</p>
+<h4 id="node升级">Node升级</h4>
+<p>Windows系统中，使用命令行升级很麻烦，简单的方法是将之前的安装文件覆盖</p>
+<ul>
+<li><p>找到node的安装路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">where</span> node</span><br></pre></td></tr></table></figure></li>
+<li><p><a href="https://nodejs.org/en/">官网下载</a>对应安装包，安装在之前的路径中，并勾选将PATH加入系统路径中</p></li>
+<li><p>查看node和npm的版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v <span class="comment"># 查看node版本</span></span><br><span class="line">npm -v  <span class="comment"># 查看npm版本</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="hexo升级">Hexo升级</h4>
+<ol type="1">
+<li><p>全局升级hexo-cli</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>可以选定hexo版本特定升级</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo@6.1.0</span><br></pre></td></tr></table></figure></li>
+<li><p>使用npm-check检查系统插件是否有可以升级的</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g npm-check <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-check</span><br></pre></td></tr></table></figure></li>
+<li><p>使用npm-upgrade升级系统中的相关插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g npm-upgrade <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-upgrade</span><br></pre></td></tr></table></figure></li>
+<li><p>检查升级npm本身</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm update -g     <span class="comment"># 更新全局插件</span></span><br><span class="line">npm update --save <span class="comment"># 更新系统插件</span></span><br><span class="line">npm install -g npm</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Website</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -659,8 +659,8 @@
 <li><p>驱动安装是否成功：<code>nvidia-smi</code></p></li>
 <li><p>cuda_toolkit安装是否成功：<code>nvcc -V</code>（<em>该版本可以和驱动输出右上角的版本号不同</em>）</p></li>
 <li><p>cudnn安装是否成功：</p>
-<p>（老版本）<code>cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2</code></p>
-<p>（新版本）<code>cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2</code></p></li>
+<p>(老版本) <code>cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2</code></p>
+<p>(新版本) <code>cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2</code></p></li>
 </ul>
 <h2 id="多版本切换">多版本切换</h2>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看当前cuda指向的版本</span></span><br><span class="line"><span class="built_in">stat</span> /usr/local/cuda</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除原来的cuda映射关系</span></span><br><span class="line">sudo <span class="built_in">rm</span> -rf /usr/local/cuda</span><br><span class="line"></span><br><span class="line"><span class="comment"># 建立新的映射，指定对应的cuda版本</span></span><br><span class="line">sudo <span class="built_in">ln</span> -s /usr/local/cuda-11.3 /usr/local/cuda</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换完毕检查</span></span><br><span class="line">nvcc -V <span class="comment"># stat也可以</span></span><br></pre></td></tr></table></figure>
