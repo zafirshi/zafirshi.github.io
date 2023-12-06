@@ -21,22 +21,20 @@
     var CONFIG = {"hostname":"zafirshi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="写博客工作流，记录常用命令和实用技巧以备忘">
+  <meta name="description" content="解决华硕B550M主板驱动较新，Ubuntu18.04系统内核没有预装新驱动，导致的有线网络图标无显示的问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客工作流">
-<meta property="og:url" content="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/index.html">
+<meta property="og:title" content="Ubuntu18.04 华硕B550M主板有线网络连接故障">
+<meta property="og:url" content="http://zafirshi.github.io/2023/12/06/Ubuntu18-04-%E5%8D%8E%E7%A1%95B550M%E4%B8%BB%E6%9D%BF%E6%9C%89%E7%BA%BF%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E6%95%85%E9%9A%9C/index.html">
 <meta property="og:site_name" content="Zafirshi&#39;s Blog">
-<meta property="og:description" content="写博客工作流，记录常用命令和实用技巧以备忘">
+<meta property="og:description" content="解决华硕B550M主板驱动较新，Ubuntu18.04系统内核没有预装新驱动，导致的有线网络图标无显示的问题">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/Hexo博客工作流/image.png">
-<meta property="article:published_time" content="2022-03-28T15:05:12.000Z">
-<meta property="article:modified_time" content="2023-09-29T18:31:09.919Z">
+<meta property="article:published_time" content="2023-12-06T03:10:17.000Z">
+<meta property="article:modified_time" content="2023-12-06T15:23:38.807Z">
 <meta property="article:author" content="Zafirshi">
-<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/Hexo博客工作流/image.png">
 
-<link rel="canonical" href="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/">
+<link rel="canonical" href="http://zafirshi.github.io/2023/12/06/Ubuntu18-04-%E5%8D%8E%E7%A1%95B550M%E4%B8%BB%E6%9D%BF%E6%9C%89%E7%BA%BF%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E6%95%85%E9%9A%9C/">
 
 
 <script id="page-configurations">
@@ -49,7 +47,7 @@
   };
 </script>
 
-  <title>Hexo博客工作流 | Zafirshi's Blog</title>
+  <title>Ubuntu18.04 华硕B550M主板有线网络连接故障 | Zafirshi's Blog</title>
   
 
 
@@ -204,7 +202,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/">
+    <link itemprop="mainEntityOfPage" href="http://zafirshi.github.io/2023/12/06/Ubuntu18-04-%E5%8D%8E%E7%A1%95B550M%E4%B8%BB%E6%9D%BF%E6%9C%89%E7%BA%BF%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E6%95%85%E9%9A%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -217,7 +215,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo博客工作流
+          Ubuntu18.04 华硕B550M主板有线网络连接故障
         </h1>
 
         <div class="post-meta">
@@ -226,27 +224,21 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-03-28 23:05:12" itemprop="dateCreated datePublished" datetime="2022-03-28T23:05:12+08:00">2022-03-28</time>
+              <time title="创建时间：2023-12-06 11:10:17 / 修改时间：23:23:38" itemprop="dateCreated datePublished" datetime="2023-12-06T11:10:17+08:00">2023-12-06</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-09-30 02:31:09" itemprop="dateModified" datetime="2023-09-30T02:31:09+08:00">2023-09-30</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                  <a href="/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Study/Website/" itemprop="url" rel="index"><span itemprop="name">Website</span></a>
+                  <a href="/categories/Bug/Hardware/" itemprop="url" rel="index"><span itemprop="name">Hardware</span></a>
                 </span>
             </span>
 
@@ -263,14 +255,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.4k</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -282,68 +274,64 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>写博客工作流，记录常用命令和实用技巧以备忘</p>
+        <p>解决华硕B550M主板驱动较新，Ubuntu18.04系统内核没有预装新驱动，导致的有线网络图标无显示的问题</p>
 <span id="more"></span>
 <hr />
-<h3 id="创作工作流">创作工作流</h3>
-<p>首先需要新建一个草稿，草稿中的文件最后是不会在线上部署，并自动会使用<code>scaffolds/</code>文件夹下，对应layout（page，draft，post）的模板</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;file_name&quot;</span></span><br></pre></td></tr></table></figure>
-<p>预览草稿在本地的显示效果 server 时的<code>—-draft</code>参数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo server --draft -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure>
-<p>在草稿上写好之后，就可以通过publish命令，将草稿无缝发布在<code>_posts</code>文件夹中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish draft &lt;file_name&gt;</span><br></pre></td></tr></table></figure>
-<p>在draft中只需要专注于文稿正文部分主要内容，在publish到<code>_post</code>后</p>
-<blockquote>
-<p>打开相应的post并完善其中Abstract部分，更改Front
-Matter，赋予合适的Tag和Category分类，删除最上面的大标题，文稿中的标题从h2开始</p>
-</blockquote>
-<p>之后的按照部署的工作流进行部署</p>
-<h3 id="部署工作流">部署工作流</h3>
-<p>在<code>_posts</code>文件夹中写好相关的文件之后，整体的部署流程大致是：generate（生成静态文件）→server（部署在本地端口查看）→deploy（部署上线）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="故障描述">故障描述</h2>
+<p>在更换台式机主板为华硕B550M之后，</p>
 <ul>
-<li><p>本地查看时可能会遇到端口冲突
-默认4000端口被占用，可以使用下面的命令，指定端口：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -p &lt;<span class="built_in">local</span> port&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>发现：Ubuntu18.04系统上无法连接有线上网，右上角的有线图标无显示，有线端口不识别</p></li>
+<li><p>已经进行的尝试：</p>
+<ul class="task-list">
+<li><label><input type="checkbox"
+checked="" />插入USB无线网卡Ubuntu测试，无线上网可用 =&gt;
+排除系统和网络环境问题</label></li>
+<li><label><input type="checkbox"
+checked="" />切换Win10系统测试，有线上网可用 =&gt;
+排除网线/交换机/IP分配/接口硬件故障</label></li>
+</ul></li>
+<li><p>故障精细定位：</p>
+<ul class="task-list">
+<li><label><input
+type="checkbox" />怀疑主板BIOS的网口驱动开关未打开</label></li>
+<li><label><input
+type="checkbox" />怀疑主板上的有线网卡控制器较新，Ubuntu18.04内核不包含对应网卡驱动</label></li>
+</ul></li>
 </ul>
-<p>有时本地查看的效果和线上不一致，可能是之前使用hexo版本比较老的缘故（hexo
-version:4.0+→6.1），升级之后再看一下</p>
-<p>本地查看效果无误后，将hexo的public清除，将全部文稿重新部署</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<h3 id="提前需要配置好的选项">提前需要配置好的选项</h3>
-<p>在新建md文件时，需要一个和其同名的assert文件来存放图片、下载的文档和压缩包等，首先需要在根目录的<code>_config.yml</code>文件做如下修改：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>使用Typera写文档时，在<code>编辑器的文件/偏好设置/图像</code>中进行如下设置：</p>
-<figure>
-<img src="Hexo博客工作流/image.png" alt="image" />
-<figcaption aria-hidden="true">image</figcaption>
-</figure>
-<p>这样直接粘贴在md文件中的图片就自动保存在同名的assert文件中</p>
-<h3 id="hexo配置更新">hexo配置更新</h3>
-<p>在使用很久之后，hexo等博客网络框架的版本都有些老了，这里记录如何更新博客技术栈</p>
-<h4 id="node升级">Node升级</h4>
-<p>Windows系统中，使用命令行升级很麻烦，简单的方法是将之前的安装文件覆盖</p>
+<h2 id="故障解决">故障解决</h2>
+<p>针对精细定位提出的两个怀疑，逐个验证：</p>
 <ul>
-<li><p>找到node的安装路径</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">where</span> node</span><br></pre></td></tr></table></figure></li>
-<li><p><a
-target="_blank" rel="noopener" href="https://nodejs.org/en/">官网下载</a>对应安装包，安装在之前的路径中，并勾选将PATH加入系统路径中</p></li>
-<li><p>查看node和npm的版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v <span class="comment"># 查看node版本</span></span><br><span class="line">npm -v  <span class="comment"># 查看npm版本</span></span><br></pre></td></tr></table></figure></li>
+<li>进入主板BIOS，仔细翻看设置面板，发现没有可设置的网口开关选项，其他选项造成故障的可能性不大
+=&gt; 暂时排除主板BIOS设置问题</li>
+<li>在Ubuntu18.04中安装适配主板网卡的驱动，下面详细讲述这个过程</li>
 </ul>
-<h4 id="hexo升级">Hexo升级</h4>
+<p>首先使用<code>lshw -C network</code>，查看网络适配器是否被系统识别，结果输出如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">*-network UNCLAIMED</span><br><span class="line">        description: Ethernet controller</span><br><span class="line">        product: Realtek Semiconductor Co., Ltd.</span><br><span class="line">        vendor: Realtek Semiconductor Co., Ltd.</span><br><span class="line">        physical <span class="built_in">id</span>: 0</span><br><span class="line">        bus info: pci@0000:07:00.0</span><br><span class="line">        version: 05</span><br><span class="line">        width: 64 bits</span><br><span class="line">        clock: 33MHz</span><br><span class="line">        capabilities: pm msi pciexpress msix vpd cap_list</span><br><span class="line">        configuration: latency=0</span><br><span class="line">        resources: ioport:f000(size=256) memory:fc500000-fc50ffff memory:fc510000-fc513fff</span><br><span class="line">*-network</span><br><span class="line">        description: Wireless interface</span><br><span class="line">        physical <span class="built_in">id</span>: 1</span><br><span class="line">        bus info: usb@3:3</span><br><span class="line">        logical name: wlp10s0f3u3</span><br><span class="line">        serial: 82:77:17:00:28:d5</span><br><span class="line">        capabilities: ethernet physical wireless</span><br><span class="line">        configuration: broadcast=<span class="built_in">yes</span> driver=mt7601u driverversion=5.4.0-150-generic firmware=N/A ip=10.181.203.217 <span class="built_in">link</span>=<span class="built_in">yes</span> multicast=<span class="built_in">yes</span> wireless=IEEE 802.11</span><br></pre></td></tr></table></figure>
+<p>可以从输出中看到，总共有两个网络设备：</p>
+<ul>
+<li>第二个网络设备（<code>physical id: 1</code>）是无线接口，已经被正确识别并正在使用（因为有IP地址，并且被标记为<code>link=yes</code>）</li>
+<li>第一个网络设备（<code>physical id: 0</code>）为有线网络接口，被标记为<code>UNCLAIMED</code>，这就意味着没有和驱动程序关联</li>
+</ul>
+<p>进一步，我们需要使用<code>lspci | grep Realtek</code>，查看有线网络设备的具体型号：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">07:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. Device 8125 (rev 05)</span><br></pre></td></tr></table></figure>
+<p>由此得到有线网络控制器是<code>Realtek8125</code>设备。这是一款比较新的千兆以太网控制器，Ubuntu18.04的内核没有预装该设备驱动，而Win10有预装，因此造成了在Win10可有线上网，Ubuntu18.04不可以的情况。</p>
+<p>之后，只需下载安装合适的驱动即可，安装步骤如下：</p>
 <ol type="1">
-<li><p>全局升级hexo-cli</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>可以选定hexo版本特定升级</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo@6.1.0</span><br></pre></td></tr></table></figure></li>
-<li><p>使用npm-check检查系统插件是否有可以升级的</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm-check <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-check</span><br></pre></td></tr></table></figure></li>
-<li><p>使用npm-upgrade升级系统中的相关插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm-upgrade <span class="comment"># 如果没安装先安装</span></span><br><span class="line">npm-upgrade</span><br></pre></td></tr></table></figure></li>
-<li><p>检查升级npm本身</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm update -g     <span class="comment"># 更新全局插件</span></span><br><span class="line">npm update --save <span class="comment"># 更新系统插件</span></span><br><span class="line">npm install -g npm</span><br></pre></td></tr></table></figure></li>
+<li><p>去<a
+target="_blank" rel="noopener" href="https://www.realtek.com/en/">官网</a>下载对应<code>Realtek8125</code>型号的驱动安装包，选择<code>PCIe FE/Linux</code>标签下:2.5G/5G
+<code>Ethernet LINUX driver r8125 for kernel up to 6.4</code>选项，<a
+target="_blank" rel="noopener" href="https://www.realtek.com/en/directly-download?downloadid=0a7b89796d32c2bc5551dd8e4a60ae4e">下载安装包</a></p>
+<blockquote>
+<p>直到6.4版本的内核都支持，内核版本可以用过<code>uname -r</code>命令查看</p>
+</blockquote></li>
+<li><p>解压安装包，并在线编译安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># unpack</span></span><br><span class="line">tar xvf r8125-9.012.03.tar.bz2</span><br><span class="line"><span class="built_in">cd</span> ./r8125-9.012.03</span><br><span class="line"></span><br><span class="line"><span class="comment"># pre update</span></span><br><span class="line"><span class="comment"># sudo apt update</span></span><br><span class="line"><span class="comment"># sudo apt install build-essential</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># run</span></span><br><span class="line">sudo ./autorun.sh</span><br></pre></td></tr></table></figure></li>
+<li><p>自动编译安装完成后，使用<code>lsmod | grep r8125</code>检查是否成功，返回进程表示成功</p></li>
+<li><p>下载安装包和解压文件可删除</p></li>
+<li><p>重启</p></li>
 </ol>
+<p>至此，右上角出现图标，端口正常被识别，执行<code>lshw -C network</code>返回正常，故障解决。</p>
+<p>之后正确配置IP/网关/DNS/代理，便可有线（科学）上网。</p>
 
     </div>
 
@@ -359,7 +347,7 @@ target="_blank" rel="noopener" href="https://nodejs.org/en/">官网下载</a>对
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://zafirshi.github.io/2022/03/28/Hexo%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/" title="Hexo博客工作流">http://zafirshi.github.io/2022/03/28/Hexo博客工作流/</a>
+    <a href="http://zafirshi.github.io/2023/12/06/Ubuntu18-04-%E5%8D%8E%E7%A1%95B550M%E4%B8%BB%E6%9D%BF%E6%9C%89%E7%BA%BF%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E6%95%85%E9%9A%9C/" title="Ubuntu18.04 华硕B550M主板有线网络连接故障">http://zafirshi.github.io/2023/12/06/Ubuntu18-04-华硕B550M主板有线网络连接故障/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -371,7 +359,7 @@ target="_blank" rel="noopener" href="https://nodejs.org/en/">官网下载</a>对
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+              <a href="/tags/Ubuntu/" rel="tag"><i class="fa fa-tag"></i> Ubuntu</a>
           </div>
 
         
@@ -380,13 +368,10 @@ target="_blank" rel="noopener" href="https://nodejs.org/en/">官网下载</a>对
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/02/02/Latex/" rel="prev" title="Latex语法">
-      <i class="fa fa-chevron-left"></i> Latex语法
+    <a href="/2022/10/31/Linux%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99-Unexepcted-inconsistency-RUN/" rel="prev" title="Linux系统启动报错:Unexepcted inconsistency:RUN fsck MANUALLY">
+      <i class="fa fa-chevron-left"></i> Linux系统启动报错:Unexepcted inconsistency:RUN fsck MANUALLY
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/05/17/%E8%8B%B1%E4%BC%9F%E8%BE%BENX%E5%BC%80%E5%8F%91%E6%9D%BFClash%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/" rel="next" title="英伟达NX开发板Clash安装及配置">
-      英伟达NX开发板Clash安装及配置 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -446,7 +431,7 @@ target="_blank" rel="noopener" href="https://nodejs.org/en/">官网下载</a>对
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">1.</span> <span class="nav-text">创作工作流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">2.</span> <span class="nav-text">部署工作流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E5%89%8D%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AE%E5%A5%BD%E7%9A%84%E9%80%89%E9%A1%B9"><span class="nav-number">3.</span> <span class="nav-text">提前需要配置好的选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo%E9%85%8D%E7%BD%AE%E6%9B%B4%E6%96%B0"><span class="nav-number">4.</span> <span class="nav-text">hexo配置更新</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%85%E9%9A%9C%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">故障描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%85%E9%9A%9C%E8%A7%A3%E5%86%B3"><span class="nav-number">2.</span> <span class="nav-text">故障解决</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -675,7 +660,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'zafirshi.github.io',
       owner       : 'zafirshi',
       admin       : ['zafirshi'],
-      id          : 'f9e0477e36f804baacdedf3fc35bda73',
+      id          : '1776b7a7121041e1f2e4c943edf5115a',
         language: '',
       distractionFreeMode: true
     });

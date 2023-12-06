@@ -809,6 +809,76 @@ href="https://developer.nvidia.com/rdp/cudnn-archive">官网</a>下载，匹配�
       </tags>
   </entry>
   <entry>
+    <title>Ubuntu18.04 华硕B550M主板有线网络连接故障</title>
+    <url>/2023/12/06/Ubuntu18-04-%E5%8D%8E%E7%A1%95B550M%E4%B8%BB%E6%9D%BF%E6%9C%89%E7%BA%BF%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E6%95%85%E9%9A%9C/</url>
+    <content><![CDATA[<p>解决华硕B550M主板驱动较新，Ubuntu18.04系统内核没有预装新驱动，导致的有线网络图标无显示的问题</p>
+<span id="more"></span>
+<hr />
+<h2 id="故障描述">故障描述</h2>
+<p>在更换台式机主板为华硕B550M之后，</p>
+<ul>
+<li><p>发现：Ubuntu18.04系统上无法连接有线上网，右上角的有线图标无显示，有线端口不识别</p></li>
+<li><p>已经进行的尝试：</p>
+<ul class="task-list">
+<li><label><input type="checkbox"
+checked="" />插入USB无线网卡Ubuntu测试，无线上网可用 =&gt;
+排除系统和网络环境问题</label></li>
+<li><label><input type="checkbox"
+checked="" />切换Win10系统测试，有线上网可用 =&gt;
+排除网线/交换机/IP分配/接口硬件故障</label></li>
+</ul></li>
+<li><p>故障精细定位：</p>
+<ul class="task-list">
+<li><label><input
+type="checkbox" />怀疑主板BIOS的网口驱动开关未打开</label></li>
+<li><label><input
+type="checkbox" />怀疑主板上的有线网卡控制器较新，Ubuntu18.04内核不包含对应网卡驱动</label></li>
+</ul></li>
+</ul>
+<h2 id="故障解决">故障解决</h2>
+<p>针对精细定位提出的两个怀疑，逐个验证：</p>
+<ul>
+<li>进入主板BIOS，仔细翻看设置面板，发现没有可设置的网口开关选项，其他选项造成故障的可能性不大
+=&gt; 暂时排除主板BIOS设置问题</li>
+<li>在Ubuntu18.04中安装适配主板网卡的驱动，下面详细讲述这个过程</li>
+</ul>
+<p>首先使用<code>lshw -C network</code>，查看网络适配器是否被系统识别，结果输出如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">*-network UNCLAIMED</span><br><span class="line">        description: Ethernet controller</span><br><span class="line">        product: Realtek Semiconductor Co., Ltd.</span><br><span class="line">        vendor: Realtek Semiconductor Co., Ltd.</span><br><span class="line">        physical <span class="built_in">id</span>: 0</span><br><span class="line">        bus info: pci@0000:07:00.0</span><br><span class="line">        version: 05</span><br><span class="line">        width: 64 bits</span><br><span class="line">        clock: 33MHz</span><br><span class="line">        capabilities: pm msi pciexpress msix vpd cap_list</span><br><span class="line">        configuration: latency=0</span><br><span class="line">        resources: ioport:f000(size=256) memory:fc500000-fc50ffff memory:fc510000-fc513fff</span><br><span class="line">*-network</span><br><span class="line">        description: Wireless interface</span><br><span class="line">        physical <span class="built_in">id</span>: 1</span><br><span class="line">        bus info: usb@3:3</span><br><span class="line">        logical name: wlp10s0f3u3</span><br><span class="line">        serial: 82:77:17:00:28:d5</span><br><span class="line">        capabilities: ethernet physical wireless</span><br><span class="line">        configuration: broadcast=<span class="built_in">yes</span> driver=mt7601u driverversion=5.4.0-150-generic firmware=N/A ip=10.181.203.217 <span class="built_in">link</span>=<span class="built_in">yes</span> multicast=<span class="built_in">yes</span> wireless=IEEE 802.11</span><br></pre></td></tr></table></figure>
+<p>可以从输出中看到，总共有两个网络设备：</p>
+<ul>
+<li>第二个网络设备（<code>physical id: 1</code>）是无线接口，已经被正确识别并正在使用（因为有IP地址，并且被标记为<code>link=yes</code>）</li>
+<li>第一个网络设备（<code>physical id: 0</code>）为有线网络接口，被标记为<code>UNCLAIMED</code>，这就意味着没有和驱动程序关联</li>
+</ul>
+<p>进一步，我们需要使用<code>lspci | grep Realtek</code>，查看有线网络设备的具体型号：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">07:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. Device 8125 (rev 05)</span><br></pre></td></tr></table></figure>
+<p>由此得到有线网络控制器是<code>Realtek8125</code>设备。这是一款比较新的千兆以太网控制器，Ubuntu18.04的内核没有预装该设备驱动，而Win10有预装，因此造成了在Win10可有线上网，Ubuntu18.04不可以的情况。</p>
+<p>之后，只需下载安装合适的驱动即可，安装步骤如下：</p>
+<ol type="1">
+<li><p>去<a
+href="https://www.realtek.com/en/">官网</a>下载对应<code>Realtek8125</code>型号的驱动安装包，选择<code>PCIe FE/Linux</code>标签下:2.5G/5G
+<code>Ethernet LINUX driver r8125 for kernel up to 6.4</code>选项，<a
+href="https://www.realtek.com/en/directly-download?downloadid=0a7b89796d32c2bc5551dd8e4a60ae4e">下载安装包</a></p>
+<blockquote>
+<p>直到6.4版本的内核都支持，内核版本可以用过<code>uname -r</code>命令查看</p>
+</blockquote></li>
+<li><p>解压安装包，并在线编译安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># unpack</span></span><br><span class="line">tar xvf r8125-9.012.03.tar.bz2</span><br><span class="line"><span class="built_in">cd</span> ./r8125-9.012.03</span><br><span class="line"></span><br><span class="line"><span class="comment"># pre update</span></span><br><span class="line"><span class="comment"># sudo apt update</span></span><br><span class="line"><span class="comment"># sudo apt install build-essential</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># run</span></span><br><span class="line">sudo ./autorun.sh</span><br></pre></td></tr></table></figure></li>
+<li><p>自动编译安装完成后，使用<code>lsmod | grep r8125</code>检查是否成功，返回进程表示成功</p></li>
+<li><p>下载安装包和解压文件可删除</p></li>
+<li><p>重启</p></li>
+</ol>
+<p>至此，右上角出现图标，端口正常被识别，执行<code>lshw -C network</code>返回正常，故障解决。</p>
+<p>之后正确配置IP/网关/DNS/代理，便可有线（科学）上网。</p>
+]]></content>
+      <categories>
+        <category>Bug</category>
+        <category>Hardware</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>保研那些事</title>
     <url>/2020/12/07/%E4%BF%9D%E7%A0%94%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
     <content><![CDATA[<p>这里简单介绍一下我的保研经历，同时也作为我尝试用Markdown第一次编写博客的一个小demo</p>
